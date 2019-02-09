@@ -28,7 +28,7 @@
     </div>
     <div class="col-8">
         <div class="row">
-            <div class="col-xl-3 col-md-4 col-sm-6 col-xs-12">
+            <div class="col-xl-3 col-md-4 col-sm-6 col-xs-12 col-centered">
                 <a href="{{url('/')}}"><img width="179" src="{{url('img/daw_electronics.png')}}"></a>
             </div>
             <div class="d-none d-xl-block col-xl-4">
@@ -39,24 +39,33 @@
                 </form>
             </div>
             </div>
-            <div class="d-none d-sm-block col-xl-3 col-md-4 col-sm-6">
+            <div class="d-none d-sm-block col-xl-3 col-md-4 col-sm-6 col-centered">
 
-            @if (Auth::check())
-            <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
-                                    {{ Auth::user()->name }} <span class="caret"></span>
-                                </a>
+            @if (Auth::check())       
 
-                                <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
-                                    <a class="dropdown-item" href="{{ route('logout') }}"
-                                       onclick="event.preventDefault();
-                                                     document.getElementById('logout-form').submit();">
-                                        {{ __('Logout') }}
-                                    </a>
+            <button type="button" id="login" class="btn btn-primary" data-toggle="dropdown">
+            <div class="tituloCategoria">{{ Auth::user()->name }} <span class="caret"></span>
+            </button>
+                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                    @if (Auth::user()->admin)
+                    <a class="dropdown-item" href="{{url('user/admin')}}">
+                        Panel Administrador</a>
+                    </a>
+                    @else
+                    <a class="dropdown-item" href="{{url('user/pedidos')}}">
+                        Mis Pedidos</a>
+                    </a>
+                    @endif
+                    <a class="dropdown-item" href="{{ route('logout') }}"
+                        onclick="event.preventDefault();
+                        document.getElementById('logout-form').submit();">
+                        {{ __('Logout') }}
+                    </a>
 
-                                    <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
-                                        @csrf
-                                    </form>
-                                </div>
+                    <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
+                        @csrf
+                    </form>
+                </div>
             @else
                 <button type="button" id="login" class="btn btn-primary" data-toggle="modal" data-target="#modalLogin">
                     INICIAR SESIÓN / REGISTRARSE
@@ -212,14 +221,14 @@
                     </div>
                 </div>
             </div>
-            <div class="d-none d-md-block col-xl-2 col-md-4">
-                <!-- <div class="cart_anchor"></div> -->
-                <form action="" method="post" >
+            <div class="d-none d-md-block col-xl-2 col-md-4 col-centered">
+                <div class="cart_anchor"></div>
+                <!-- <form action="" method="post" >
 
 					<span id="cantidad" class="btn btn-danger" >0</span><span  class="btn btn-danger" id="carrito" >0</span>
 					<input type="submit" id="enviar" value="Ver Carrito">
 
-				</form>
+				</form> -->
             </div>
         </div>
     </div>
