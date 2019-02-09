@@ -17,7 +17,7 @@
 @foreach ($arrayProductos as $producto)
 <div class="cardGen">
 
-    <div class="card">
+    <div class="card card-productos">
         <div><a href="{{url('product/'.$producto->id)}}"><img class="card-img-top" src="{{url('img/'.$producto->imgRoute)}}" alt="Card image cap"></a></div>
         <div class="card-body">
         <a href="{{url('product/'.$producto->id)}}"><h5 class="card-title">{{$producto->brand}} {{$producto->model}}</h5></a>

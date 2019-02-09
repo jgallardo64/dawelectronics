@@ -12,6 +12,13 @@
     text-align: center;
 }
 
+#listaProductos,
+th,
+td {
+    border: 1px solid black;
+    border-collapse: collapse;
+}
+
 #banner-top {
     background-color: #404659;
     height: 30px;
@@ -120,7 +127,7 @@
     text-decoration: none;
 }
 
-.card {
+.card-productos {
     float: left;
     width: 220px;
     padding: 10px;

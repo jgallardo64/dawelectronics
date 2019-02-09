@@ -17,6 +17,12 @@ Route::get('category/{category}/{subCategory}', 'CategoriesController@getSubCate
 
 Route::get('product/{product}', 'ProductsController@getProduct');
 
+Route::get('user/admin', 'UsersController@showAdminPanel');
+
+Route::get('user/admin/listar', 'UsersController@listar');
+
+Route::get('user/admin/nuevoproducto', 'UsersController@nuevoProducto');
+
 Auth::routes();
 
 Route::get('/', 'HomeController@index');

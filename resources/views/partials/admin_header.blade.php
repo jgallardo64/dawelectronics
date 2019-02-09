@@ -32,7 +32,7 @@
             </div>
             <div class="d-none d-sm-block col-xl-3 col-md-4 col-sm-6 col-centered">
 
-            @if (Auth::check())       
+            @if (Auth::check())
 
             <button type="button" id="login" class="btn btn-primary" data-toggle="dropdown">
             <div class="tituloCategoria">{{ Auth::user()->name }} <span class="caret"></span>
@@ -214,12 +214,6 @@
             </div>
             <div class="d-none d-md-block col-xl-2 col-md-4 col-centered">
                 <div class="cart_anchor"></div>
-                <!-- <form action="" method="post" >
-
-					<span id="cantidad" class="btn btn-danger" >0</span><span  class="btn btn-danger" id="carrito" >0</span>
-					<input type="submit" id="enviar" value="Ver Carrito">
-
-				</form> -->
             </div>
         </div>
     </div>
@@ -241,65 +235,32 @@
                 <ul class="navbar-nav">
                         <li class="nav-item dropdown">
                             <a class="nav-link dropdown" href="{{url('category/informatica')}}" id="navbardrop">
-                                INFORMÁTICA
+                                PRODUCTOS
                             </a>
                             <div class="dropdown-menu">
-                                <a class="dropdown-item" href="{{url('category/informatica/portatiles')}}">Portatiles</a>
-                                <a class="dropdown-item" href="{{url('category/informatica/pc sobremesa')}}">PC
-                                    Sobremesa</a>
-                                <a class="dropdown-item" href="{{url('category/informatica/tablets')}}">Tablets</a>
+                                <a class="dropdown-item" href="{{url('user/admin/listar')}}">Listar productos</a>
+                                <a class="dropdown-item" href="{{url('category/informatica/pc sobremesa')}}">Añadir productos</a>
+                                <a class="dropdown-item" href="{{url('category/informatica/pc sobremesa')}}">Consultar stock</a>
+                                <a class="dropdown-item" href="{{url('category/informatica/pc sobremesa')}}">Consultar ventas</a>
                             </div>
                         </li>
                         <li class="nav-item dropdown">
                             <a class="nav-link dropdown" href="{{url('category/telefonia')}}" id="navbardrop">
-                                TELEFONÍA
+                                USUARIOS
                             </a>
                             <div class="dropdown-menu">
-                                <a class="dropdown-item" href="{{url('category/telefonia/smartphones')}}">Smartphones</a>
-                                <a class="dropdown-item" href="{{url('category/telefonia/smartwatches')}}">Smartwatches</a>
-                                <a class="dropdown-item" href="{{url('category/telefonia/telefonia domestica')}}">Telefonía
-                                    doméstica</a>
+                                <a class="dropdown-item" href="{{url('category/telefonia/smartphones')}}">Listar usuarios</a>
+                                <a class="dropdown-item" href="{{url('category/telefonia/smartwatches')}}">Añadir usuarios</a>
+                                <a class="dropdown-item" href="{{url('category/telefonia/smartwatches')}}">Pedidos usuarios</a>                                
                             </div>
                         </li>
                         <li class="nav-item dropdown">
                             <a class="nav-link dropdown" href="{{url('category/television')}}" id="navbardrop">
-                                TELEVISIÓN
+                                PROVEEDORES
                             </a>
                             <div class="dropdown-menu">
-                                <a class="dropdown-item" href="{{url('category/television/televisores')}}">Televisores</a>
+                                <a class="dropdown-item" href="{{url('category/television/televisores')}}">Pedidos</a>
                                 <a class="dropdown-item" href="{{url('category/television/proyectores')}}">Proyectores</a>
-                            </div>
-                        </li>
-                        <li class="nav-item dropdown">
-                            <a class="nav-link dropdown" href="{{url('category/fotografia')}}" id="navbardrop">
-                                FOTOGRAFIA
-                            </a>
-                            <div class="dropdown-menu">
-                                <a class="dropdown-item" href="{{url('category/fotografia/camaras reflex')}}">Cámaras
-                                    réflex</a>
-                                <a class="dropdown-item" href="{{url('category/fotografia/camaras evil')}}">Cámaras
-                                    Evil</a>
-                                <a class="dropdown-item" href="{{url('category/fotografia/videocamaras deportivas')}}">Videocámaras
-                                    deportivas</a>
-                            </div>
-                        </li>
-                        <li class="nav-item dropdown">
-                            <a class="nav-link dropdown" href="{{url('category/ocio')}}" id="navbardrop">
-                                OCIO
-                            </a>
-                            <div class="dropdown-menu">
-                                <a class="dropdown-item" href="{{url('category/ocio/consolas')}}">Consolas</a>
-                                <a class="dropdown-item" href="{{url('category/ocio/juegos')}}">Juegos</a>
-                            </div>
-                        </li>
-                        <li class="nav-item dropdown">
-                            <a class="nav-link dropdown" href="{{url('category/accesorios')}}" id="navbardrop">
-                                ACCESORIOS
-                            </a>
-                            <div class="dropdown-menu">
-                                <a class="dropdown-item" href="{{url('category/accesorios/cables')}}">Cables</a>
-                                <a class="dropdown-item" href="{{url('category/accesorios/cargadores')}}">Cargadores</a>
-                                <a class="dropdown-item" href="{{url('category/accesorios/baterias')}}">Baterias</a>
                             </div>
                         </li>
                     </ul>
