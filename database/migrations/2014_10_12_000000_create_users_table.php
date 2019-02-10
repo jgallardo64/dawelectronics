@@ -19,6 +19,14 @@ class CreateUsersTable extends Migration
             $table->string('email')->unique();
             $table->timestamp('email_verified_at')->nullable();
             $table->string('password');
+            $table->string('addressshipping')->nullable();
+            $table->string('addressshippingPO')->nullable();
+            $table->string('addressshippingcity')->nullable();
+            $table->string('addressshippingregion')->nullable();
+            $table->string('addressbilling')->nullable();
+            $table->string('addressbillingPO')->nullable();
+            $table->string('addressbillingcity')->nullable();
+            $table->string('addressbillingregion')->nullable();
             $table->tinyinteger('admin')->default(0);
             $table->rememberToken();
             $table->timestamps();

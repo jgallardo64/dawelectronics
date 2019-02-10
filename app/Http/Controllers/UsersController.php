@@ -23,6 +23,22 @@ class UsersController extends Controller
         return view('user.admin.listar', array('arrayProductos' => $arrayProductos));
     }
 
+    public function stock(){
+        $arrayProductos = Product::all()->where('stock', '<', 10);
+        return view('user.admin.stock', array('arrayProductos' => $arrayProductos));
+    }
+
+    public function usuarios(){
+        $arrayUsuarios = User::all();
+        return view('user.admin.usuarios', array('arrayUsuarios' => $arrayUsuarios));
+    }
+
+    public function borrarUsuario($id){
+        $usuario = User::find($id);
+        $usuario->delete();
+        return redirect('user/admin/usuarios');
+    }
+
     public function nuevoProducto(){
         return view('user.admin.nuevoproducto');
     }

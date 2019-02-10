@@ -21,10 +21,21 @@ Route::get('user/admin', 'UsersController@showAdminPanel');
 
 Route::get('user/admin/listar', 'UsersController@listar');
 
+Route::group(['middleware' => 'admin:1'], function() {
+
+
+});
+
 Route::get('user/admin/nuevoproducto', 'UsersController@nuevoProducto');
 Route::post('user/admin/nuevoproducto', 'UsersController@addProduct');
 Route::get('user/admin/editarproducto/{id}', 'UsersController@editarProducto');
 Route::put('user/admin/editarproducto/{id}', 'UsersController@editProduct');
+
+Route::get('user/admin/stock', 'UsersController@stock');
+
+Route::get('user/admin/usuarios', 'UsersController@usuarios');
+
+Route::get('user/admin/usuarios/borrar/{id}', 'UsersController@borrarUsuario');
 
 Auth::routes();
 
