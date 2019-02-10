@@ -239,19 +239,19 @@
                             </a>
                             <div class="dropdown-menu">
                                 <a class="dropdown-item" href="{{url('user/admin/listar')}}">Listar productos</a>
-                                <a class="dropdown-item" href="{{url('category/informatica/pc sobremesa')}}">Añadir productos</a>
-                                <a class="dropdown-item" href="{{url('category/informatica/pc sobremesa')}}">Consultar stock</a>
-                                <a class="dropdown-item" href="{{url('category/informatica/pc sobremesa')}}">Consultar ventas</a>
+                                <a class="dropdown-item" href="{{url('user/admin/nuevoproducto')}}">Añadir productos</a>
+                                <a class="dropdown-item" href="{{url('user/admin/stock')}}">Consultar stock</a>
+                                <a class="dropdown-item" href="{{url('user/admin/ventas')}}">Consultar ventas</a>
                             </div>
                         </li>
                         <li class="nav-item dropdown">
-                            <a class="nav-link dropdown" href="{{url('category/telefonia')}}" id="navbardrop">
+                            <a class="nav-link dropdown" href="{{url('user/admin/listar')}}" id="navbardrop">
                                 USUARIOS
                             </a>
                             <div class="dropdown-menu">
-                                <a class="dropdown-item" href="{{url('category/telefonia/smartphones')}}">Listar usuarios</a>
-                                <a class="dropdown-item" href="{{url('category/telefonia/smartwatches')}}">Añadir usuarios</a>
-                                <a class="dropdown-item" href="{{url('category/telefonia/smartwatches')}}">Pedidos usuarios</a>                                
+                                <a class="dropdown-item" href="{{url('user/admin/usuarios')}}">Listar usuarios</a>
+                                <a class="dropdown-item" href="{{url('user/admin/nuevousuario')}}">Añadir usuarios</a>
+                                <a class="dropdown-item" href="{{url('user/admin/pedidos')}}">Pedidos usuarios</a>                                
                             </div>
                         </li>
                         <li class="nav-item dropdown">
@@ -259,8 +259,7 @@
                                 PROVEEDORES
                             </a>
                             <div class="dropdown-menu">
-                                <a class="dropdown-item" href="{{url('category/television/televisores')}}">Pedidos</a>
-                                <a class="dropdown-item" href="{{url('category/television/proyectores')}}">Proyectores</a>
+                                <a class="dropdown-item" href="{{url('user/admin/proveedores')}}">Pedidos</a>
                             </div>
                         </li>
                     </ul>

@@ -8,7 +8,7 @@
 
     </div>
     <div class="col-xl-6 col-lg-12 col-md-12 col-sm-12 col-xs-12 text-center border border-danger">
-        <img src="{{url('img/'. $product['imgRoute'])}}" style="width: 390px; heigth: 200px" alt="prueba">
+        <img src="{{url('images/'.$product['id'])}}.png" style="width: 390px; heigth: 200px" alt="prueba">
         <div class="row price">
             <div class="col-xl-4 col-lg-4 col-md-4 col-sm-4 col-xs-4 border border-danger">
                 {{$product->price}} € 

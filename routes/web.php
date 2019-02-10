@@ -22,6 +22,9 @@ Route::get('user/admin', 'UsersController@showAdminPanel');
 Route::get('user/admin/listar', 'UsersController@listar');
 
 Route::get('user/admin/nuevoproducto', 'UsersController@nuevoProducto');
+Route::post('user/admin/nuevoproducto', 'UsersController@addProduct');
+Route::get('user/admin/editarproducto/{id}', 'UsersController@editarProducto');
+Route::put('user/admin/editarproducto/{id}', 'UsersController@editProduct');
 
 Auth::routes();
 
