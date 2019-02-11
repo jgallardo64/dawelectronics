@@ -92,6 +92,7 @@ class SubcategoriesTableSeeder extends Seeder
      */
     public function run()
     {
+        Schema::disableForeignKeyConstraints();
         DB::table('subcategories')->truncate();
         foreach ($this->arraySubcategorias as $subcategoria) {
             $subcategory = new Subcategory();
@@ -99,5 +100,6 @@ class SubcategoriesTableSeeder extends Seeder
             $subcategory->categoryid = $subcategoria['categoryid'];
             $subcategory->save();
         }
+        Schema::enableForeignKeyConstraints();
     }
 }

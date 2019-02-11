@@ -2,7 +2,6 @@
 
 use Illuminate\Database\Seeder;
 use App\Taxes;
-
 class TaxesTableSeeder extends Seeder
 {
     /**

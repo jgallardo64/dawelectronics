@@ -11,11 +11,15 @@ class DatabaseSeeder extends Seeder
      */
     public function run()
     {
+        Schema::disableForeignKeyConstraints();
+
         $this->call(CategoriesTableSeeder::class);
         $this->call(ProductsTableSeeder::class);
         $this->call(SubcategoriesTableSeeder::class);
-        $this->call(ProvidersTableSeeder::class);
         $this->call(TaxesTableSeeder::class);
+        $this->call(ProvidersTableSeeder::class);
+        $this->call(ProviderOrdersTableSeeder::class);
         
+        Schema::enableForeignKeyConstraints();
     }
 }

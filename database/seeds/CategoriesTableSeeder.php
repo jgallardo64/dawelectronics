@@ -12,6 +12,7 @@ class CategoriesTableSeeder extends Seeder
      */
     public function run()
     {
+        Schema::disableForeignKeyConstraints();
         DB::table('categories')->truncate();
         $category = new Category();
         $category->name = 'Informatica';
@@ -31,5 +32,6 @@ class CategoriesTableSeeder extends Seeder
         $category = new Category();
         $category->name = 'Accesorios';
         $category->save();
+        Schema::enableForeignKeyConstraints();
     }
 }

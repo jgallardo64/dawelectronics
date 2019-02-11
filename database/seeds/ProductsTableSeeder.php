@@ -592,6 +592,7 @@ class ProductsTableSeeder extends Seeder
      */
 	public function run()
 	{
+		Schema::disableForeignKeyConstraints();
 		DB::table('products')->truncate();
 		foreach ($this->arrayProductos as $producto) {
 			$product = new Product();
@@ -611,5 +612,6 @@ class ProductsTableSeeder extends Seeder
 			$product->active = $producto['active'];
 			$product->save();
 		}
+		Schema::enableForeignKeyConstraints();
 	}
 }

@@ -10,7 +10,7 @@ class ProvidersTableSeeder extends Seeder
      *
      * @return void
      */
-    private $providerArr = array(
+    private $providersArray = array(
         array(
             "id" => 1,
             "nif" => "11184393E",
@@ -154,10 +154,11 @@ class ProvidersTableSeeder extends Seeder
     );
 
     public function run() {
-         Schema::disableForeignKeyConstraints();
+        
+        Schema::disableForeignKeyConstraints();
         DB::table('providers')->truncate();
 
-        foreach ($this->providerArr as $p) {
+        foreach ($this->providerArray as $p) {
             $provider = new Provider();
             $provider->nif = $p['nif'];
             $provider->email = $p['email'];
@@ -167,4 +168,5 @@ class ProvidersTableSeeder extends Seeder
         }
         Schema::enableForeignKeyConstraints();
     }
+
 }
