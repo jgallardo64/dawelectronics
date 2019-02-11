@@ -35,6 +35,7 @@ Route::group(['middleware' => 'auth'], function() {
         Route::get('user/admin/usuarios', 'UsersController@usuarios');
         Route::get('user/admin/usuarios/borrar/{id}', 'UsersController@borrarUsuario');
     });
+    Route::get('user/showOrders{id}', 'UsersController@showOrders');
 });
 
 Auth::routes();
