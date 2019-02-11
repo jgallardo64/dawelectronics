@@ -40,11 +40,6 @@ class CreateForeignKeysTable extends Migration
             $table->foreign('providerorderid')->references('id')->on('provider_orders');
             $table->foreign('productid')->references('id')->on('products');
         });
-
-        Schema::table('favourites', function (Blueprint $table) {
-            $table->foreign('userid')->references('id')->on('users');
-            $table->foreign('productid')->references('id')->on('products');
-        });
     }
 
     /**
@@ -81,11 +76,6 @@ class CreateForeignKeysTable extends Migration
         Schema::table('provider_order_lines', function (Blueprint $table) {
             $table->dropForeign('provider_order_lines_providerorderid_foreign');
             $table->dropForeign('provider_order_lines_productid_foreign');
-        });
-
-        Schema::table('favourites', function (Blueprint $table) {
-            $table->dropForeign('favourites_userid_foreign');
-            $table->dropForeign('favourites_productid_foreign');
         });
     }
 }

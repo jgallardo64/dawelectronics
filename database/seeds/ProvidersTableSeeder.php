@@ -158,7 +158,7 @@ class ProvidersTableSeeder extends Seeder
         Schema::disableForeignKeyConstraints();
         DB::table('providers')->truncate();
 
-        foreach ($this->providerArray as $p) {
+        foreach ($this->providersArray as $p) {
             $provider = new Provider();
             $provider->nif = $p['nif'];
             $provider->email = $p['email'];
