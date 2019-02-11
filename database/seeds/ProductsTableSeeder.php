@@ -20,7 +20,8 @@ class ProductsTableSeeder extends Seeder
 			"providerid"=>1,
 			"imgRoute"=>"Productos\/Informatica\/Portatil\/hp01.png",
 			"stock"=>20,
-			"taxesid"=>1
+			"taxesid"=>1,
+			"active" => true
 		),
 		array (
 			"id"=>2,
@@ -36,7 +37,8 @@ class ProductsTableSeeder extends Seeder
 			"providerid"=>1,
 			"imgRoute"=>"Productos\/Informatica\/Portatil\/hp02.png",
 			"stock"=>20,
-			"taxesid"=>1
+			"taxesid"=>1,
+			"active" => true
 		),
 		array (
 			"id"=>3,
@@ -52,7 +54,8 @@ class ProductsTableSeeder extends Seeder
 			"providerid"=>1,
 			"imgRoute"=>"Productos\/Informatica\/Portatil\/hp03.png",
 			"stock"=>20,
-			"taxesid"=>1
+			"taxesid"=>1,
+			"active" => true
 		),
 		array (
 			"id"=>4,
@@ -68,7 +71,8 @@ class ProductsTableSeeder extends Seeder
 			"providerid"=>1,
 			"imgRoute"=>"Productos\/Informatica\/Portatil\/hp04.png",
 			"stock"=>20,
-			"taxesid"=>1
+			"taxesid"=>1,
+			"active" => true
 		),
 		array (
 			"id"=>5,
@@ -84,7 +88,8 @@ class ProductsTableSeeder extends Seeder
 			"providerid"=>1,
 			"imgRoute"=>"Productos\/Informatica\/Portatil\/lenovo01.png",
 			"stock"=>20,
-			"taxesid"=>1
+			"taxesid"=>1,
+			"active" => true
 		),
 		array (
 			"id"=>6,
@@ -100,7 +105,8 @@ class ProductsTableSeeder extends Seeder
 			"providerid"=>1,
 			"imgRoute"=>"Productos\/Informatica\/Portatil\/apple01.png",
 			"stock"=>20,
-			"taxesid"=>1
+			"taxesid"=>1,
+			"active" => true
 		),
 		array (
 			"id"=>7,
@@ -116,7 +122,8 @@ class ProductsTableSeeder extends Seeder
 			"providerid"=>1,
 			"imgRoute"=>"Productos\/Informatica\/Portatil\/apple02.png",
 			"stock"=>20,
-			"taxesid"=>1
+			"taxesid"=>1,
+			"active" => true
 		),
 		array (
 			"id"=>8,
@@ -132,7 +139,8 @@ class ProductsTableSeeder extends Seeder
 			"providerid"=>1,
 			"imgRoute"=>"Productos\/Informatica\/Portatil\/acer01.png",
 			"stock"=>20,
-			"taxesid"=>1
+			"taxesid"=>1,
+			"active" => true
 		),
 		array (
 			"id"=>9,
@@ -148,7 +156,8 @@ class ProductsTableSeeder extends Seeder
 			"providerid"=>1,
 			"imgRoute"=>"Productos\/Informatica\/Portatil\/acer02.png",
 			"stock"=>20,
-			"taxesid"=>1
+			"taxesid"=>1,
+			"active" => true
 		),
 		array (
 			"id"=>10,
@@ -164,7 +173,8 @@ class ProductsTableSeeder extends Seeder
 			"providerid"=>1,
 			"imgRoute"=>"Productos\/Informatica\/Portatil\/acer03.png",
 			"stock"=>20,
-			"taxesid"=>1
+			"taxesid"=>1,
+			"active" => true
 		),
 		array (
 			"id"=>11,
@@ -180,7 +190,8 @@ class ProductsTableSeeder extends Seeder
 			"providerid"=>2,
 			"imgRoute"=>"Productos\/Informatica\/Sobremesa\/hp01.png",
 			"stock"=>20,
-			"taxesid"=>2
+			"taxesid"=>2,
+			"active" => true
 		),
 		array (
 			"id"=>12,
@@ -196,7 +207,8 @@ class ProductsTableSeeder extends Seeder
 			"providerid"=>2,
 			"imgRoute"=>"Productos\/Informatica\/Sobremesa\/hp02.png",
 			"stock"=>20,
-			"taxesid"=>2
+			"taxesid"=>2,
+			"active" => true
 		),
 		array (
 			"id"=>13,
@@ -212,7 +224,8 @@ class ProductsTableSeeder extends Seeder
 			"providerid"=>2,
 			"imgRoute"=>"Productos\/Informatica\/Sobremesa\/hp03.png",
 			"stock"=>20,
-			"taxesid"=>2
+			"taxesid"=>2,
+			"active" => true
 		),
 		array (
 			"id"=>14,
@@ -228,7 +241,8 @@ class ProductsTableSeeder extends Seeder
 			"providerid"=>2,
 			"imgRoute"=>"Productos\/Informatica\/Sobremesa\/lenovo01.png",
 			"stock"=>20,
-			"taxesid"=>2
+			"taxesid"=>2,
+			"active" => true
 		),
 		array (
 			"id"=>15,
@@ -244,7 +258,8 @@ class ProductsTableSeeder extends Seeder
 			"providerid"=>2,
 			"imgRoute"=>"Productos\/Informatica\/Sobremesa\/lenovo02.png",
 			"stock"=>20,
-			"taxesid"=>2
+			"taxesid"=>2,
+			"active" => true
 		),
 		array (
 			"id"=>16,
@@ -260,7 +275,8 @@ class ProductsTableSeeder extends Seeder
 			"providerid"=>2,
 			"imgRoute"=>"Productos\/Informatica\/Sobremesa\/predator01.png",
 			"stock"=>20,
-			"taxesid"=>2
+			"taxesid"=>2,
+			"active" => true
 		),
 		array (
 			"id"=>17,
@@ -276,7 +292,8 @@ class ProductsTableSeeder extends Seeder
 			"providerid"=>3,
 			"imgRoute"=>"Productos\/Informatica\/Tablets\/samsung01.png",
 			"stock"=>20,
-			"taxesid"=>3
+			"taxesid"=>3,
+			"active" => true
 		),
 		array (
 			"id"=>18,
@@ -292,7 +309,8 @@ class ProductsTableSeeder extends Seeder
 			"providerid"=>3,
 			"imgRoute"=>"Productos\/Informatica\/Perifericos\/monitor01.png",
 			"stock"=>20,
-			"taxesid"=>3
+			"taxesid"=>3,
+			"active" => true
 		),
 		array (
 			"id"=>19,
@@ -308,7 +326,8 @@ class ProductsTableSeeder extends Seeder
 			"providerid"=>3,
 			"imgRoute"=>"Productos\/Fotografia\/Reflex\/nikon01.png",
 			"stock"=>20,
-			"taxesid"=>3
+			"taxesid"=>3,
+			"active" => true
 		),
 		array (
 			"id"=>20,
@@ -324,7 +343,8 @@ class ProductsTableSeeder extends Seeder
 			"providerid"=>2,
 			"imgRoute"=>"Productos\/Fotografia\/Evil\/sony01.png",
 			"stock"=>20,
-			"taxesid"=>1
+			"taxesid"=>1,
+			"active" => true
 		),
 		array (
 			"id"=>21,
@@ -340,7 +360,8 @@ class ProductsTableSeeder extends Seeder
 			"providerid"=>2,
 			"imgRoute"=>"Productos\/Fotografia\/Objetivos\/canon01.png",
 			"stock"=>20,
-			"taxesid"=>2
+			"taxesid"=>2,
+			"active" => true
 		),
 		array (
 			"id"=>22,
@@ -356,7 +377,8 @@ class ProductsTableSeeder extends Seeder
 			"providerid"=>4,
 			"imgRoute"=>"Productos\/Fotografia\/Deportivas\/gopro01.png",
 			"stock"=>20,
-			"taxesid"=>2
+			"taxesid"=>2,
+			"active" => true
 		),
 		array (
 			"id"=>23,
@@ -372,7 +394,8 @@ class ProductsTableSeeder extends Seeder
 			"providerid"=>5,
 			"imgRoute"=>"Productos\/Telefonia\/Smartphones\/iphone01.png",
 			"stock"=>20,
-			"taxesid"=>1
+			"taxesid"=>1,
+			"active" => true
 		),
 		array (
 			"id"=>24,
@@ -388,7 +411,8 @@ class ProductsTableSeeder extends Seeder
 			"providerid"=>7,
 			"imgRoute"=>"Productos\/Telefonia\/Smartwatches\/samsung01.png",
 			"stock"=>20,
-			"taxesid"=>3
+			"taxesid"=>3,
+			"active" => true
 		),
 		array (
 			"id"=>25,
@@ -404,7 +428,8 @@ class ProductsTableSeeder extends Seeder
 			"providerid"=>8,
 			"imgRoute"=>"Productos\/Telefonia\/Telefoniadomestica\/motorola01.png",
 			"stock"=>20,
-			"taxesid"=>1
+			"taxesid"=>1,
+			"active" => true
 		),
 		array (
 			"id"=>26,
@@ -420,7 +445,8 @@ class ProductsTableSeeder extends Seeder
 			"providerid"=>4,
 			"imgRoute"=>"Productos\/Ocio\/Videojuegos\/residentevil.png",
 			"stock"=>20,
-			"taxesid"=>2
+			"taxesid"=>2,
+			"active" => true
 		),
 		array (
 			"id"=>27,
@@ -436,7 +462,8 @@ class ProductsTableSeeder extends Seeder
 			"providerid"=>1,
 			"imgRoute"=>"Productos\/Ocio\/Consolas\/ps401.png",
 			"stock"=>20,
-			"taxesid"=>3
+			"taxesid"=>3,
+			"active" => true
 		),
 		array (
 			"id"=>28,
@@ -452,7 +479,8 @@ class ProductsTableSeeder extends Seeder
 			"providerid"=>4,
 			"imgRoute"=>"Productos\/Television\/Televisores\/samsung01.png",
 			"stock"=>20,
-			"taxesid"=>2
+			"taxesid"=>2,
+			"active" => true
 		),
 		array (
 			"id"=>29,
@@ -468,7 +496,8 @@ class ProductsTableSeeder extends Seeder
 			"providerid"=>6,
 			"imgRoute"=>"Productos\/Television\/Proyectores\/epson01.png",
 			"stock"=>20,
-			"taxesid"=>2
+			"taxesid"=>2,
+			"active" => true
 		),
 		array (
 			"id"=>30,
@@ -484,7 +513,8 @@ class ProductsTableSeeder extends Seeder
 			"providerid"=>3,
 			"imgRoute"=>"Productos\/Accesorios\/Cables\/hdmi01.png",
 			"stock"=>20,
-			"taxesid"=>2
+			"taxesid"=>2,
+			"active" => true
 		),
 		array (
 			"id"=>31,
@@ -500,7 +530,8 @@ class ProductsTableSeeder extends Seeder
 			"providerid"=>4,
 			"imgRoute"=>"Productos\/Accesorios\/Cargadores\/samsung01.png",
 			"stock"=>20,
-			"taxesid"=>1
+			"taxesid"=>1,
+			"active" => true
 		),
 		array (
 			"id"=>32,
@@ -516,7 +547,8 @@ class ProductsTableSeeder extends Seeder
 			"providerid"=>5,
 			"imgRoute"=>"Productos\/Accesorios\/Audio\/apple01.png",
 			"stock"=>20,
-			"taxesid"=>1
+			"taxesid"=>1,
+			"active" => true
 		),
 		array (
 			"id"=>33,
@@ -532,7 +564,8 @@ class ProductsTableSeeder extends Seeder
 			"providerid"=>8,
 			"imgRoute"=>"Productos\/Accesorios\/Video\/brazo01.png",
 			"stock"=>20,
-			"taxesid"=>3
+			"taxesid"=>3,
+			"active" => true
 		),
 		array (
 			"id"=>34,
@@ -548,7 +581,8 @@ class ProductsTableSeeder extends Seeder
 			"providerid"=>9,
 			"imgRoute"=>"Productos\/Accesorios\/Baterias\/gopro01.png",
 			"stock"=>20,
-			"taxesid"=>2
+			"taxesid"=>2,
+			"active" => true
 		)
 	);
 	/**
@@ -574,6 +608,7 @@ class ProductsTableSeeder extends Seeder
 			$product->imgRoute = $producto['imgRoute'];
 			$product->stock = $producto['stock'];
 			$product->taxesid = $producto['taxesid'];
+			$product->active = $producto['active'];
 			$product->save();
 		}
 	}

@@ -4,7 +4,7 @@
 <div class="tituloCategoria">
     <h1>
     @if (isset($subCategory))
-        {{$subCategory}}
+    {{$category}} / {{$subCategory}}
     @else
         {{$category}}
     @endif

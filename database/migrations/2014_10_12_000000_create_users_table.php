@@ -27,7 +27,7 @@ class CreateUsersTable extends Migration
             $table->string('addressbillingPO')->nullable();
             $table->string('addressbillingcity')->nullable();
             $table->string('addressbillingregion')->nullable();
-            $table->tinyinteger('admin')->default(0);
+            $table->boolean('admin')->default(false);
             $table->rememberToken();
             $table->timestamps();
         });

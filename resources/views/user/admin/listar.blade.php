@@ -17,6 +17,7 @@
                     <th scope="col">Modelo</th>
                     <th scope="col">Importe</th>                  
                     <th scope="col">Stock</th>
+                    <th scope="col">Estado</th>
                     <th scope="col">Acción</th>
                 </tr>
             </thead>
@@ -30,8 +31,16 @@
                         <td>{{$producto->price}} €</td>                         
                         <td>{{$producto->stock}}</td>
                         <td>
+                            @if ($producto->active == 1)
+                                Activo
+                            @else
+                                De baja
+                            
+                            @endif
+                        </td>
+                        <td>
                         <a href="{{url('user/admin/editarproducto/'.$producto->id)}}"><img src="{{url('images/edit.png')}}" width="20px" alt="Editar"></a> 
-                        <a href="{{url('user/admin/borrarproducto/'.$producto->id)}}"><img src="{{url('images/delete.png')}}" width="20px" alt="Borrar"></a>
+                        <a href="{{url('user/admin/actualizarproducto/'.$producto->id)}}"><img src="{{url('images/update.png')}}" width="20px" alt="Borrar"></a>
                         </td>
                     </tr>
                 @endforeach

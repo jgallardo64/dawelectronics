@@ -105,5 +105,18 @@ class UsersController extends Controller
         $producto->save();        
         
         return redirect('user/admin');
-    } 
+    }
+
+    public function updateProduct($id) 
+    {
+        $producto = Product::find($id);
+        if ($producto->active == 0) {
+            $producto->active = 1;
+        }
+        else {
+            $producto->active = 0;
+        }        
+        $producto->save();
+        return redirect('user/admin/listar');
+    }
 }

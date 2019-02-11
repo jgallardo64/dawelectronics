@@ -245,7 +245,7 @@
                             </a>
                             <div class="dropdown-menu">
                                 <a class="dropdown-item" href="{{url('category/informatica/portatiles')}}">Portatiles</a>
-                                <a class="dropdown-item" href="{{url('category/informatica/pc sobremesa')}}">PC
+                                <a class="dropdown-item" href="{{url('category/informatica/sobremesa')}}">PC
                                     Sobremesa</a>
                                 <a class="dropdown-item" href="{{url('category/informatica/tablets')}}">Tablets</a>
                             </div>
@@ -257,7 +257,7 @@
                             <div class="dropdown-menu">
                                 <a class="dropdown-item" href="{{url('category/telefonia/smartphones')}}">Smartphones</a>
                                 <a class="dropdown-item" href="{{url('category/telefonia/smartwatches')}}">Smartwatches</a>
-                                <a class="dropdown-item" href="{{url('category/telefonia/telefonia domestica')}}">Telefonía
+                                <a class="dropdown-item" href="{{url('category/telefonia/domestica')}}">Telefonía
                                     doméstica</a>
                             </div>
                         </li>
@@ -275,11 +275,11 @@
                                 FOTOGRAFIA
                             </a>
                             <div class="dropdown-menu">
-                                <a class="dropdown-item" href="{{url('category/fotografia/camaras reflex')}}">Cámaras
+                                <a class="dropdown-item" href="{{url('category/fotografia/reflex')}}">Cámaras
                                     réflex</a>
-                                <a class="dropdown-item" href="{{url('category/fotografia/camaras evil')}}">Cámaras
+                                <a class="dropdown-item" href="{{url('category/fotografia/evil')}}">Cámaras
                                     Evil</a>
-                                <a class="dropdown-item" href="{{url('category/fotografia/videocamaras deportivas')}}">Videocámaras
+                                <a class="dropdown-item" href="{{url('category/fotografia/deportivas')}}">Videocámaras
                                     deportivas</a>
                             </div>
                         </li>
@@ -289,7 +289,7 @@
                             </a>
                             <div class="dropdown-menu">
                                 <a class="dropdown-item" href="{{url('category/ocio/consolas')}}">Consolas</a>
-                                <a class="dropdown-item" href="{{url('category/ocio/juegos')}}">Juegos</a>
+                                <a class="dropdown-item" href="{{url('category/ocio/videojuegos')}}">Videojuegos</a>
                             </div>
                         </li>
                         <li class="nav-item dropdown">
