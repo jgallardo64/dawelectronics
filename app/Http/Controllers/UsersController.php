@@ -22,6 +22,10 @@ class UsersController extends Controller
         $arrayProductos = Product::all();
         return view('user.admin.listar', array('arrayProductos' => $arrayProductos));
     }
+    public function proveedores(){
+        $arrayProveedores = Provider::all();
+        return view('user.admin.proveedores', array('arrayProveedores' => $arrayProveedores));
+    }
 
     public function stock(){
         $arrayProductos = Product::all()->where('stock', '<', 10);

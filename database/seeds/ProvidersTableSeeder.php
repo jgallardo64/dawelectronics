@@ -15,42 +15,42 @@ class ProvidersTableSeeder extends Seeder
             "id" => 1,
             "nif" => "11184393E",
             "email" => "breitenberg.destinee@example.org",
-            "name" => "Dr. Weldon Predovic PhD",
+            "name" => "Hewlett-Packard",
             "country" => "Syrian Arab Republic"
         ),
         array(
             "id" => 2,
             "nif" => "37198629Q",
             "email" => "verla89@example.org",
-            "name" => "Melody Howell",
+            "name" => "Samsung",
             "country" => "Gabon"
         ),
         array(
             "id" => 3,
             "nif" => "70536775F",
             "email" => "jacobs.monroe@example.org",
-            "name" => "Nettie Osinski",
+            "name" => "Apple",
             "country" => "San Marino"
         ),
         array(
             "id" => 4,
             "nif" => "74496174W",
             "email" => "hcarroll@example.net",
-            "name" => "Julia Tillman Sr.",
+            "name" => "Lenovo",
             "country" => "Comoros"
         ),
         array(
             "id" => 5,
             "nif" => "70037944T",
             "email" => "caterina22@example.org",
-            "name" => "Rudy Schumm",
+            "name" => "Nikon",
             "country" => "Comoros"
         ),
         array(
             "id" => 6,
             "nif" => "37690779N",
             "email" => "hortense32@example.org",
-            "name" => "Mr. Sheridan Beahan DVM",
+            "name" => "Canon",
             "country" => "Mauritius"
         ),
         array(

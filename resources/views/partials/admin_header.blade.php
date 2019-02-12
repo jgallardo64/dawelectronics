@@ -255,7 +255,7 @@
                             </div>
                         </li>
                         <li class="nav-item dropdown">
-                            <a class="nav-link dropdown" href="{{url('category/television')}}" id="navbardrop">
+                            <a class="nav-link dropdown" href="{{url('ser/admin/proveedores')}}" id="navbardrop">
                                 PROVEEDORES
                             </a>
                             <div class="dropdown-menu">

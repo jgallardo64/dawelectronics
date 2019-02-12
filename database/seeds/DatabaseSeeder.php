@@ -19,6 +19,7 @@ class DatabaseSeeder extends Seeder
         $this->call(TaxesTableSeeder::class);
         $this->call(ProvidersTableSeeder::class);
         $this->call(ProviderOrdersTableSeeder::class);
+        $this->call(UsersTableSeeder::class);
         
         Schema::enableForeignKeyConstraints();
     }
