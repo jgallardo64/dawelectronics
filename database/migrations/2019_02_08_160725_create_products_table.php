@@ -20,12 +20,12 @@ class CreateProductsTable extends Migration
             $table->text('description')->nullable();
             $table->text('specifications')->nullable();
             $table->float('price')->nullable();
-            $table->unsignedInteger('categoryid');
-            $table->unsignedInteger('subcategoryid');
-            $table->unsignedInteger('providerid');
+            $table->unsignedInteger('category_id');
+            $table->unsignedInteger('subcategory_id');
+            $table->unsignedInteger('provider_id');
             $table->string('imgRoute')->nullable();
             $table->integer('stock')->nullable();
-            $table->unsignedInteger('taxesid');
+            $table->unsignedInteger('taxes_id');
             $table->boolean('active');
             $table->timestamps();
         });

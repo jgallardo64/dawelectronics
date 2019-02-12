@@ -128,8 +128,12 @@ class UsersController extends Controller
     public function showPedidos()
     {
         $arrayPedidos = Order::all();
-        $arrayLineasPedido = OrderLine::all();
-        $usuario = Order::all()->user;
-        return view('user.admin.pedidos', array('arrayPedidos' => $arrayPedidos, 'arrayLineasPedido' => $arrayLineasPedido));
+        return view('user.admin.pedidos', array('arrayPedidos' => $arrayPedidos));
+    }
+
+    public function showPedido($id)
+    {
+        $arrayLineasPedido = OrderLine::where('order_id', $id)->get();
+        return view('user.admin.detallespedido', array('arrayLineasPedido' => $arrayLineasPedido));
     }
 }

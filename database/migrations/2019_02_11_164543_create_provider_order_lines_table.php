@@ -15,8 +15,8 @@ class CreateProviderOrderLinesTable extends Migration
     {
         Schema::create('provider_order_lines', function (Blueprint $table) {
             $table->increments('id');
-            $table->unsignedInteger('providerorderid');
-            $table->unsignedInteger('productid');
+            $table->unsignedInteger('providerorder_id');
+            $table->unsignedInteger('product_id');
             $table->float('price',5)->nullable();
             $table->integer('quantity')->nullable();
             $table->float('discount')->nullable();
