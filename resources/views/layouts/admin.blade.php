@@ -36,6 +36,7 @@
 
             @yield('listar')
             @yield('formulario')
+            @yield('pedidos')
 
         <!----------------       Scripts       ---------------->
 

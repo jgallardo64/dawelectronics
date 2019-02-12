@@ -2,49 +2,56 @@
 
 namespace App\Http\Controllers;
 
+use App\Order;
+use App\OrderLine;
 use App\Product;
 use App\User;
-
 use Illuminate\Http\Request;
 
 class UsersController extends Controller
 {
     /*public function showOrders($id){
-        $usuario = User::where('id', $id)->first();
-        return view('user.orders',  array('user' => $usuario));
+    $usuario = User::where('id', $id)->first();
+    return view('user.orders',  array('user' => $usuario));
     }*/
 
-    public function showAdminPanel(){
+    public function showAdminPanel()
+    {
         return view('user.admin.index');
     }
 
-    public function listar(){
+    public function listar()
+    {
         $arrayProductos = Product::all();
         return view('user.admin.listar', array('arrayProductos' => $arrayProductos));
     }
 
-    public function stock(){
+    public function stock()
+    {
         $arrayProductos = Product::all()->where('stock', '<', 10);
         return view('user.admin.stock', array('arrayProductos' => $arrayProductos));
     }
 
-    public function usuarios(){
+    public function usuarios()
+    {
         $arrayUsuarios = User::all();
         return view('user.admin.usuarios', array('arrayUsuarios' => $arrayUsuarios));
     }
 
-    public function borrarUsuario($id){
+    public function borrarUsuario($id)
+    {
         $usuario = User::find($id);
         $usuario->delete();
         return redirect('user/admin/usuarios');
     }
 
-    public function nuevoProducto(){
+    public function nuevoProducto()
+    {
         return view('user.admin.nuevoproducto');
     }
 
     public function addProduct(Request $request)
-    {    
+    {
         $producto = new Product();
         $producto->object = $request->object;
         $producto->name = $request->name;
@@ -60,8 +67,7 @@ class UsersController extends Controller
         $producto->taxesid = $request->taxesid;
         $producto->save();
 
-        if($request->hasFile('image'))
-        {
+        if ($request->hasFile('image')) {
             $image = $request->file('image');
             $filename = $producto->id;
             $extension = mb_strtolower($image->getClientOriginalExtension());
@@ -72,7 +78,8 @@ class UsersController extends Controller
         return redirect('user/admin');
     }
 
-    public function editarProducto($id){
+    public function editarProducto($id)
+    {
         $producto = Product::find($id);
         return view('user.admin.editarproducto', array('producto' => $producto));
     }
@@ -93,8 +100,7 @@ class UsersController extends Controller
         $producto->stock = $request->stock;
         $producto->taxesid = $request->taxesid;
 
-        if($request->hasFile('image'))
-        {
+        if ($request->hasFile('image')) {
             $image = $request->file('image');
             $filename = $producto->id;
             $extension = mb_strtolower($image->getClientOriginalExtension());
@@ -102,21 +108,28 @@ class UsersController extends Controller
             $imagepath = $request->image->move($path, $filename . '.' . $extension);
         }
 
-        $producto->save();        
-        
+        $producto->save();
+
         return redirect('user/admin');
     }
 
-    public function updateProduct($id) 
+    public function updateProduct($id)
     {
         $producto = Product::find($id);
         if ($producto->active == 0) {
             $producto->active = 1;
-        }
-        else {
+        } else {
             $producto->active = 0;
-        }        
+        }
         $producto->save();
         return redirect('user/admin/listar');
+    }
+
+    public function showPedidos()
+    {
+        $arrayPedidos = Order::all();
+        $arrayLineasPedido = OrderLine::all();
+        $usuario = Order::all()->user;
+        return view('user.admin.pedidos', array('arrayPedidos' => $arrayPedidos, 'arrayLineasPedido' => $arrayLineasPedido));
     }
 }
