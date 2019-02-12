@@ -13,7 +13,7 @@
 
                     {{method_field('PUT')}}
 
-                    {{ csrf_field() }}                       
+                    {{ csrf_field() }}
 
                         <div class="form-group row">
                             <label for="object" class="col-md-4 col-form-label text-md-right">Producto</label>
@@ -106,41 +106,69 @@
                             <div class="col-md-6">
                                 <select name="subcategoryid" class="form-control" id="subcategoryid">
 
-                                @php
-                                $subcategorias = array(
-                                    1  => 'Portatiles',
-                                    2 => 'PC de sobremesa',
-                                    3 => 'Tablets',
-                                    4 => 'Perifericos',
-                                    5 => 'Camaras reflex',
-                                    6 => 'Camaras evil',
-                                    7 => 'Objetivos',
-                                    8 => 'Camaras deportivas',
-                                    9 => 'Smartphones',
-                                    10 => 'Smartwatches',
-                                    11 => 'Telefonia doméstica',
-                                    12 => 'Videojuegos',
-                                    13 => 'Consolas',
-                                    14 => 'Televisores',
-                                    15 => 'Proyectores',
-                                    16 => 'Cables',
-                                    17 => 'Cargadores',
-                                    18 => 'Audio',
-                                    19 => 'Video',
-                                    20 => 'Baterias',
-                                    
-                                );
+                                    @php
+                                    $subcategorias = array(
+                                        1  => 'Portatiles',
+                                        2 => 'PC de sobremesa',
+                                        3 => 'Tablets',
+                                        4 => 'Perifericos',
+                                        5 => 'Camaras reflex',
+                                        6 => 'Camaras evil',
+                                        7 => 'Objetivos',
+                                        8 => 'Camaras deportivas',
+                                        9 => 'Smartphones',
+                                        10 => 'Smartwatches',
+                                        11 => 'Telefonia doméstica',
+                                        12 => 'Videojuegos',
+                                        13 => 'Consolas',
+                                        14 => 'Televisores',
+                                        15 => 'Proyectores',
+                                        16 => 'Cables',
+                                        17 => 'Cargadores',
+                                        18 => 'Audio',
+                                        19 => 'Video',
+                                        20 => 'Baterias',
 
-                                foreach ($subcategorias as $subcategoria => $texto) {
-                                    if ($subcategoria==$producto->subcategoryid) {
-                                        echo '<option value="'.$subcategoria.'" selected>'.$texto.'</option>';
-                                    }
-                                    else {
-                                        echo '<option value="'.$subcategoria.'">'.$texto.'</option>';
-                                    }
-                                }
-                                @endphp
+                                    );
 
+                                    foreach ($subcategorias as $subcategoria => $texto) {
+                                        if ($subcategoria==$producto->subcategoryid) {
+                                            echo '<option value="'.$subcategoria.'" selected>'.$texto.'</option>';
+                                        }
+                                        else {
+                                            echo '<option value="'.$subcategoria.'">'.$texto.'</option>';
+                                        }
+                                    }
+                                    @endphp
+
+                                    <script type="text/javascript">
+                                        $(document).ready(function() {
+                                        $("#categoryid").change(function() {
+                                            switch ($(this).val()) {
+                                            case "1":
+                                                $("#subcategoryid").html("<option value=1>Portatiles</option><option value=2>PC sobremesa</option><option value=3>Tablets</option><option value=4>Perifericos</option>");
+                                                break;
+                                            case "2":
+                                                $("#subcategoryid").html("<option value=5>Camaras reflex</option><option value=6>Camaras evil</option><option value=7>Objetivos</option><option value=8>Camaras deportivas</option>");
+                                                break;
+                                            case "3":
+                                                $("#subcategoryid").html("<option value=9>Smartphones</option><option value=10>Smartwatches</option><option value=11>Telefonia domestica</option>");
+                                                break;
+                                            case "4":
+                                                $("#subcategoryid").html("<option value=12>Videojuegos</option><option value=13>Consolas</option>");
+                                                break;
+                                            case "5":
+                                                $("#subcategoryid").html("<option value=14>Televisores</option><option value=15>Proyectores</option>");
+                                                break;
+                                            case "3":
+                                                $("#subcategoryid").html("<option value=16>Cables</option><option value=17>Cargadores</option><option value=18>Audio</option><option value=19>Video</option><option value=20>Baterias</option>");
+                                                break;
+                                            default:
+                                                $("#subcategoryid").html("<option value=0>-----</option>");
+                                            }
+                                        });
+                                        });
+                                    </script>
                                 </select>
                             </div>
                         </div>
