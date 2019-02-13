@@ -16,7 +16,7 @@ class ProvidersController extends Controller
 
     public function listarProductosProveedor($provider)
     {
-        $arrayProductos = Product::where('provider_id', $provider)->where('active', 1)->get();
+        $arrayProductos = Product::where('provider_id', $provider)->get();
         return view('providers.list', array('arrayProductos' => $arrayProductos, 'provider_id' => $provider));
     }
 }

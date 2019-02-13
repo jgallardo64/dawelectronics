@@ -10,13 +10,13 @@ class ProductsController extends Controller
 {
     public function detallesProducto($id){
         $producto = Product::where('id', $id)->first();
-        return view('product.index',  array('product' => $producto));
+        return view('products.index',  array('product' => $producto));
     }
 
     public function listarProductos()
     {
         $arrayProductos = Product::all();
-        return view('user.admin.listar', array('arrayProductos' => $arrayProductos));
+        return view('products.listar', array('arrayProductos' => $arrayProductos));
     }
 
     public function menuStock()
@@ -33,7 +33,7 @@ class ProductsController extends Controller
 
     public function menuNuevoProducto()
     {
-        return view('user.admin.nuevoproducto');
+        return view('products.nuevoproducto');
     }
 
     public function formNuevoProducto(Request $request)
@@ -67,7 +67,7 @@ class ProductsController extends Controller
     public function menuEditarProducto($id)
     {
         $producto = Product::find($id);
-        return view('user.admin.editarproducto', array('producto' => $producto));
+        return view('products.editarproducto', array('producto' => $producto));
     }
 
     public function formEditarProducto(Request $request, $id)
@@ -108,6 +108,6 @@ class ProductsController extends Controller
             $producto->active = 0;
         }
         $producto->save();
-        return redirect('user/admin/listar');
+        return redirect('user/admin/listarproductos');
     }
 }
