@@ -16,15 +16,15 @@ Route::get('/', 'HomeController@index');
 
 Route::get('/home', 'HomeController@index')->name('home');
 
-Route::get('category/{category}', 'CategoriesController@getCategory');
+Route::get('category/{category}', 'CategoriesController@mostrarCategoria');
 
-Route::get('category/{category}/{subCategory}', 'CategoriesController@getSubCategory');
+Route::get('category/{category}/{subCategory}', 'CategoriesController@mostrarSubcategoria');
 
-Route::get('product/{product}', 'ProductsController@getProduct');
+Route::get('product/{product}', 'ProductsController@detallesProducto');
 
 Route::group(['middleware' => 'auth'], function () {
     Route::group(['middleware' => 'admin:1'], function () {
-        Route::get('user/admin', 'UsersController@showAdminPanel');
+        Route::get('user/admin', 'UsersController@mostrarPanelAdmin');
         Route::get('user/admin/listarproductos', 'ProductsController@listarProductos');
         Route::get('user/admin/nuevoproducto', 'ProductsController@menuNuevoProducto');
         Route::post('user/admin/nuevoproducto', 'ProductsController@formNuevoProducto');
@@ -33,14 +33,14 @@ Route::group(['middleware' => 'auth'], function () {
         Route::get('user/admin/actualizarproducto/{id}', 'ProductsController@actualizarProducto');
         Route::get('user/admin/stock', 'ProductsController@menuStock');
         Route::post('user/admin/stock', 'ProductsController@comprobarStock');
-        Route::get('user/admin/usuarios', 'UsersController@usuarios');
-        Route::get('user/admin/usuarios/borrar/{id}', 'UsersController@borrarUsuario');
-        Route::get('user/admin/proveedores','ProvidersController@getProvider');
-        Route::get('user/admin/productosProveedor/{id}','ProvidersController@getProductsProvider');
+        Route::get('user/admin/usuarios', 'UsersController@listarUsuarios');
+        Route::get('user/admin/usuarios/borrar/{id}', 'UsersController@borrarUsuarios');
+        Route::get('user/admin/proveedores','ProvidersController@listarProveedores');
+        Route::get('user/admin/productosproveedor/{id}','ProvidersController@listarProductosProveedor');
         Route::get('user/admin/pedidosusuarios', 'UsersController@listarPedidosUsuarios');
-        Route::get('user/admin/detallespedido/{id}', 'UsersController@mostrarPedidoUsuario');
+        Route::get('user/admin/detallespedido/{id}', 'UsersController@detallesPedidoUsuario');
     });
-    Route::get('user/showOrders{id}', 'UsersController@showOrders');
+    Route::get('user/pedidos{id}', 'UsersController@listarPedidos');
 });
 
 Auth::routes();

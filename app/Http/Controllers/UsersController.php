@@ -17,16 +17,17 @@ class UsersController extends Controller
 
     }*/
 
-    public function showAdminPanel()
+    public function mostrarPanelAdmin()
     {
         return view('user.admin.index');
+    }
 
-    public function proveedores(){
+    public function listarProveedores(){
         $arrayProveedores = Provider::all();
         return view('user.admin.proveedores', array('arrayProveedores' => $arrayProveedores));
     }
 
-    public function usuarios()
+    public function listarUsuarios()
     {
         $arrayUsuarios = User::all();
         return view('user.admin.usuarios', array('arrayUsuarios' => $arrayUsuarios));
@@ -45,7 +46,7 @@ class UsersController extends Controller
         return view('user.admin.pedidos', array('arrayPedidos' => $arrayPedidos));
     }
 
-    public function mostrarPedidoUsuario($id)
+    public function detallesPedidoUsuario($id)
     {
         $arrayLineasPedido = OrderLine::where('order_id', $id)->get();
         return view('user.admin.detallespedido', array('arrayLineasPedido' => $arrayLineasPedido));

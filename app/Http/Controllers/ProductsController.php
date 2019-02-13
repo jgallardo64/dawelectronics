@@ -8,7 +8,7 @@ use Illuminate\Http\Request;
 
 class ProductsController extends Controller
 {
-    public function getProduct($id){
+    public function detallesProducto($id){
         $producto = Product::where('id', $id)->first();
         return view('product.index',  array('product' => $producto));
     }

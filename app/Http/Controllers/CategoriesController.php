@@ -9,7 +9,7 @@ use Illuminate\Http\Request;
 
 class CategoriesController extends Controller
 {
-    public function getCategory($category)
+    public function mostrarCategoria($category)
     {
         $categoryId = Category::where('name', $category)->first()->id;
         $arrayProductos = Product::where('category_id', $categoryId)->where('active', 1)->get();
@@ -19,7 +19,7 @@ class CategoriesController extends Controller
 
         return view('category.index', array('arrayProductos' => $arrayProductos, 'category' => $category));
     }
-    public function getSubCategory($category, $subCategory)
+    public function mostrarSubcategoria($category, $subCategory)
     {
         $categoryId = Category::where('name', $category)->first()->id;
         $subcategoryId = Subcategory::where('name', $subCategory)->first()->id;
