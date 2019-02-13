@@ -35,9 +35,12 @@ Route::group(['middleware' => 'auth'], function () {
         Route::post('user/admin/stock', 'ProductsController@comprobarStock');
         Route::get('user/admin/usuarios', 'UsersController@usuarios');
         Route::get('user/admin/usuarios/borrar/{id}', 'UsersController@borrarUsuario');
+        Route::get('user/admin/proveedores','ProvidersController@getProvider');
+        Route::get('user/admin/productosProveedor/{id}','ProvidersController@getProductsProvider');
         Route::get('user/admin/pedidosusuarios', 'UsersController@listarPedidosUsuarios');
         Route::get('user/admin/detallespedido/{id}', 'UsersController@mostrarPedidoUsuario');
     });
+    Route::get('user/showOrders{id}', 'UsersController@showOrders');
 });
 
 Auth::routes();

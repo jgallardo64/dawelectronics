@@ -29,3 +29,4 @@ class UsersTableSeeder extends Seeder
         $user->save();
     }
 }
+

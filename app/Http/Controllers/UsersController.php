@@ -11,14 +11,20 @@ use Illuminate\Http\Request;
 class UsersController extends Controller
 {
     /*public function showOrders($id){
+
     $usuario = User::where('id', $id)->first();
     return view('user.orders',  array('user' => $usuario));
+
     }*/
 
     public function showAdminPanel()
     {
         return view('user.admin.index');
-    }    
+
+    public function proveedores(){
+        $arrayProveedores = Provider::all();
+        return view('user.admin.proveedores', array('arrayProveedores' => $arrayProveedores));
+    }
 
     public function usuarios()
     {
