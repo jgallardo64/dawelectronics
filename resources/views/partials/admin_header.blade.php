@@ -234,7 +234,7 @@
                 <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav">
                         <li class="nav-item dropdown">
-                            <a class="nav-link dropdown" href="{{url('category/informatica')}}" id="navbardrop">
+                            <a class="nav-link dropdown" id="navbardrop">
                                 PRODUCTOS
                             </a>
                             <div class="dropdown-menu">
@@ -245,7 +245,7 @@
                             </div>
                         </li>
                         <li class="nav-item dropdown">
-                            <a class="nav-link dropdown" href="{{url('user/admin/listar')}}" id="navbardrop">
+                            <a class="nav-link dropdown"  id="navbardrop">
                                 USUARIOS
                             </a>
                             <div class="dropdown-menu">
@@ -255,11 +255,12 @@
                             </div>
                         </li>
                         <li class="nav-item dropdown">
-                            <a class="nav-link dropdown" href="{{url('ser/admin/proveedores')}}" id="navbardrop">
+                            <a class="nav-link dropdown" id="navbardrop">
                                 PROVEEDORES
                             </a>
                             <div class="dropdown-menu">
                                 <a class="dropdown-item" href="{{url('user/admin/proveedores')}}">Pedidos</a>
+                                <a class="dropdown-item" href="{{url('user/admin/productosProveedor')}}">Pedidos</a>
                             </div>
                         </li>
                     </ul>
