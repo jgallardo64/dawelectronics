@@ -2,9 +2,6 @@
 
 namespace App\Http\Controllers;
 
-use App\Order;
-use App\OrderLine;
-use App\Product;
 use App\User;
 use Illuminate\Http\Request;
 
@@ -22,15 +19,10 @@ class UsersController extends Controller
         return view('user.admin.index');
     }
 
-    public function listarProveedores(){
-        $arrayProveedores = Provider::all();
-        return view('user.admin.proveedores', array('arrayProveedores' => $arrayProveedores));
-    }
-
     public function listarUsuarios()
     {
         $arrayUsuarios = User::all();
-        return view('user.admin.usuarios', array('arrayUsuarios' => $arrayUsuarios));
+        return view('users.list', array('arrayUsuarios' => $arrayUsuarios));
     }
 
     public function borrarUsuario($id)
@@ -39,16 +31,4 @@ class UsersController extends Controller
         $usuario->delete();
         return redirect('user/admin/usuarios');
     }    
-
-    public function listarPedidosUsuarios()
-    {
-        $arrayPedidos = Order::all();
-        return view('user.admin.pedidos', array('arrayPedidos' => $arrayPedidos));
-    }
-
-    public function detallesPedidoUsuario($id)
-    {
-        $arrayLineasPedido = OrderLine::where('order_id', $id)->get();
-        return view('user.admin.detallespedido', array('arrayLineasPedido' => $arrayLineasPedido));
-    }
 }
