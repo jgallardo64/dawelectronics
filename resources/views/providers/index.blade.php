@@ -26,7 +26,7 @@
                         <td>{{$proveedor->name}}</td>
                         <td>{{$proveedor->country}}</td>
                         <td>
-                        <a href="{{url('user/admin/productosProveedor/'.$proveedor->id)}}">
+                        <a href="{{url('user/admin/productosproveedor/'.$proveedor->id)}}">
                             <button type="button" class="btn btn-primary">Pedir</button>
                         </a></td>
 

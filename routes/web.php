@@ -35,7 +35,7 @@ Route::group(['middleware' => 'auth'], function() {
         Route::get('user/admin/usuarios', 'UsersController@usuarios');
         Route::get('user/admin/usuarios/borrar/{id}', 'UsersController@borrarUsuario');
         Route::get('user/admin/proveedores','ProvidersController@getProvider');
-        Route::get('user/admin/productosProveedor/{id}','ProvidersController@getProductsProvider');
+        Route::get('user/admin/productosproveedor/{id}','ProvidersController@getProductsProvider');
     });
     Route::get('user/showOrders{id}', 'UsersController@showOrders');
 });
