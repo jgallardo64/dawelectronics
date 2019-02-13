@@ -4,7 +4,7 @@
 @php
     $total = 0;
 @endphp
-
+<br>
 <div class="container">
     <div class="row">
         <div class="offset-2 col-sm-8 offset-2">
@@ -24,16 +24,16 @@
                     @endphp
                     <tr>
                         <td>{{$lineaPedido->product->name}} {{$lineaPedido->product->brand}} {{$lineaPedido->product->model}}</td>
-                        <td>{{$lineaPedido->product->price}}</td>
+                        <td>{{$lineaPedido->product->price}} €</td>
                         <td>{{$lineaPedido->quantity}}</td>
-                        <td>{{$totalProducto}}</td>
+                        <td>{{$totalProducto}} €</td>
                     </tr>
                 @endforeach
                     <tr>
                         <th scope="col">TOTAL PEDIDO</th>
                         <th scope="col"></th>
                         <th scope="col"></th>
-                        <th scope="col">{{$total}}</th>
+                        <th scope="col">{{$total}} €</th>
                     </tr>
             </table>
         </div>

@@ -2,6 +2,8 @@
 
 @section('pedidos')
 
+<br>
+
 <div class="container">
     <div class="row">
         <div class="offset-2 col-sm-8 offset-2">
