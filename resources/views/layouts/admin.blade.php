@@ -27,7 +27,7 @@
 
         <div class="container-fluid">
 
-            <!----------------        HEADER       ---------------->
+            <!-------------------        HEADER       ---------------->
 
             @include('partials.admin_header')
 
