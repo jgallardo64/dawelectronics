@@ -25,8 +25,11 @@
                         <td>{{$proveedor->email}}</td>
                         <td>{{$proveedor->name}}</td>
                         <td>{{$proveedor->country}}</td>
-                        <td><button type="button" class="btn btn-primary">Pedir</button></td>
-                        
+                        <td>
+                        <a href="{{url('user/admin/productosProveedor/'.$proveedor->id)}}">
+                            <button type="button" class="btn btn-primary">Pedir</button>
+                        </a></td>
+
                         
                       
                     </tr>

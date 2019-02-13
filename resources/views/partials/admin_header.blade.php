@@ -259,8 +259,7 @@
                                 PROVEEDORES
                             </a>
                             <div class="dropdown-menu">
-                                <a class="dropdown-item" href="{{url('user/admin/proveedores')}}">Pedidos</a>
-                                <a class="dropdown-item" href="{{url('user/admin/productosProveedor')}}">Pedidos</a>
+                                <a class="dropdown-item" href="{{url('user/admin/proveedores')}}">Listado</a>
                             </div>
                         </li>
                     </ul>
