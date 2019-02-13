@@ -18,8 +18,13 @@ class UsersController extends Controller
     public function showAdminPanel()
     {
         return view('user.admin.index');
-    }    
+    }
 
+    public function proveedores(){
+        $arrayProveedores = Provider::all();
+        return view('user.admin.proveedores', array('arrayProveedores' => $arrayProveedores));
+    }
+  
     public function usuarios()
     {
         $arrayUsuarios = User::all();

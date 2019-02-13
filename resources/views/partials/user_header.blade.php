@@ -234,32 +234,32 @@
                 <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav">
                         <li class="nav-item dropdown">
-                            <a class="nav-link dropdown" id="navbardrop">
+                            <a class="nav-link dropdown" href="{{url('category/informatica')}}" id="navbardrop">
                                 PRODUCTOS
                             </a>
                             <div class="dropdown-menu">
-                                <a class="dropdown-item" href="{{url('user/admin/listarproductos')}}">Listar productos</a>
+                                <a class="dropdown-item" href="{{url('user/admin/listar')}}">Listar productos</a>
                                 <a class="dropdown-item" href="{{url('user/admin/nuevoproducto')}}">Añadir productos</a>
                                 <a class="dropdown-item" href="{{url('user/admin/stock')}}">Consultar stock</a>
                                 <a class="dropdown-item" href="{{url('user/admin/ventas')}}">Consultar ventas</a>
                             </div>
                         </li>
                         <li class="nav-item dropdown">
-                            <a class="nav-link dropdown" id="navbardrop">
+                            <a class="nav-link dropdown" href="{{url('user/admin/listar')}}" id="navbardrop">
                                 USUARIOS
                             </a>
                             <div class="dropdown-menu">
                                 <a class="dropdown-item" href="{{url('user/admin/usuarios')}}">Listar usuarios</a>
                                 <a class="dropdown-item" href="{{url('user/admin/nuevousuario')}}">Añadir usuarios</a>
-                                <a class="dropdown-item" href="{{url('user/admin/pedidosusuarios')}}">Pedidos usuarios</a>                                
+                                <a class="dropdown-item" href="{{url('user/admin/pedidos')}}">Pedidos usuarios</a>                                
                             </div>
                         </li>
                         <li class="nav-item dropdown">
-                            <a class="nav-link dropdown" id="navbardrop">
+                            <a class="nav-link dropdown" href="{{url('category/television')}}" id="navbardrop">
                                 PROVEEDORES
                             </a>
                             <div class="dropdown-menu">
-                                <a class="dropdown-item" href="{{url('user/admin/proveedores')}}">Listado</a>
+                                <a class="dropdown-item" href="{{url('user/admin/proveedores')}}">Pedidos</a>
                             </div>
                         </li>
                     </ul>

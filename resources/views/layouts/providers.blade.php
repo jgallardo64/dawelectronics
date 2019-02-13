@@ -32,13 +32,11 @@
             @include('partials.admin_header')
 
         </div>
-            <!----------------       FORMULARIOS       ---------------->
-
-            @yield('listar')
-            @yield('formulario')
-            @yield('providers')
-            @yield('pedidos')
-            @yield('detallespedido')
+            <!----------------       PRODUCTOS PROVEEDOR       ---------------->
+            <div class="container">
+            @yield('content')
+            </div>
+            
 
         <!----------------       Scripts       ---------------->
 
