@@ -13,32 +13,32 @@ class CreateForeignKeysTable extends Migration
      */
    public function up() {
         Schema::table('subcategories', function (Blueprint $table) {
-            $table->foreign('categoryid')->references('id')->on('categories');
+            $table->foreign('category_id')->references('id')->on('categories');
         });
 
         Schema::table('orders', function (Blueprint $table) {
-            $table->foreign('userid')->references('id')->on('users');
+            $table->foreign('user_id')->references('id')->on('users');
         });
 
         Schema::table('products', function (Blueprint $table) {
-            $table->foreign('categoryid')->references('id')->on('categories');
-            $table->foreign('subcategoryid')->references('id')->on('subcategories');
-            $table->foreign('providerid')->references('id')->on('providers');
-            $table->foreign('taxesid')->references('id')->on('taxes');
+            $table->foreign('category_id')->references('id')->on('categories');
+            $table->foreign('subcategory_id')->references('id')->on('subcategories');
+            $table->foreign('provider_id')->references('id')->on('providers');
+            $table->foreign('taxes_id')->references('id')->on('taxes');
         });
 
         Schema::table('order_lines', function (Blueprint $table) {
-            $table->foreign('orderid')->references('id')->on('orders');
-            $table->foreign('productid')->references('id')->on('products');
+            $table->foreign('order_id')->references('id')->on('orders');
+            $table->foreign('product_id')->references('id')->on('products');
         });
 
         Schema::table('provider_orders', function (Blueprint $table) {
-            $table->foreign('providerid')->references('id')->on('providers');
+            $table->foreign('provider_id')->references('id')->on('providers');
         });
 
         Schema::table('provider_order_lines', function (Blueprint $table) {
-            $table->foreign('providerorderid')->references('id')->on('provider_orders');
-            $table->foreign('productid')->references('id')->on('products');
+            $table->foreign('providerorder_id')->references('id')->on('provider_orders');
+            $table->foreign('product_id')->references('id')->on('products');
         });
     }
 

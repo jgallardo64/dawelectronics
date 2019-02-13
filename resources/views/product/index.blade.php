@@ -1,7 +1,7 @@
-@extends('layouts.detail')
+@extends('layouts.master')
 
 
-@section('content')
+@section('producto')
 <div class="row">
     <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 titulo-centrado">
         <h1>{{$product->brand}} {{$product->model}}</h1>

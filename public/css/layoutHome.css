@@ -134,6 +134,13 @@ td {
     height: 400px;
 }
 
+.card-pedidos {
+    float: left;
+    width: 240px;
+    padding: 10px;
+    height: 400px;
+}
+
 .cardGen {
     display: inline-block;
 }

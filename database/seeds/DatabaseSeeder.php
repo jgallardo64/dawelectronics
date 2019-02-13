@@ -20,7 +20,7 @@ class DatabaseSeeder extends Seeder
         $this->call(ProvidersTableSeeder::class);
         $this->call(ProviderOrdersTableSeeder::class);
         $this->call(UsersTableSeeder::class);
-        
+
         Schema::enableForeignKeyConstraints();
     }
 }
