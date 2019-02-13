@@ -14,7 +14,7 @@ class CreateProviderOrdersTable extends Migration
       public function up() {
         Schema::create('provider_orders', function (Blueprint $table) {
             $table->increments('id');
-            $table->unsignedInteger('providerid');
+            $table->unsignedInteger('provider_id');
             $table->string('date');
             $table->float('total')->nullable();
             $table->timestamps();

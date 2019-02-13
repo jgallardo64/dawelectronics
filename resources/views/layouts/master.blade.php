@@ -39,6 +39,7 @@
                             
                 <div class="anchoTarjetas">
             @yield('content1')
+            @yield('producto')
             </div>
             <div >
             

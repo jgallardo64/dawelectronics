@@ -6,83 +6,83 @@ class SubcategoriesTableSeeder extends Seeder
     private $arraySubcategorias = array(
         array(
             'name' => 'Portatiles',            
-            'categoryid' => 1,
+            'category_id' => 1,
         ),
         array(
             'name' => 'Sobremesa',            
-            'categoryid' => 1,
+            'category_id' => 1,
         ),
         array(
             'name' => 'Tablets',            
-            'categoryid' => 1
+            'category_id' => 1
         ),
         array(
             'name' => 'Perifericos',
-            'categoryid' => 1,
+            'category_id' => 1,
         ),
         array(
             'name' => 'Reflex',            
-            'categoryid' => 2,
+            'category_id' => 2,
         ),
         array(
             'name' => 'Evil',
-            'categoryid' => 2,
+            'category_id' => 2,
         ),
         array(
             'name' => 'Objetivos',          
-            'categoryid' => 2,
+            'category_id' => 2,
         ),
         array(
             'name' => 'Deportivas',            
-            'categoryid' => 2,
+            'category_id' => 2,
         ),
         array(
             'name' => 'Smartphones',            
-            'categoryid' => 3,
+            'category_id' => 3,
         ),
         array(
             'name' => 'Smartwatches',            
-            'categoryid' => 3,
+            'category_id' => 3,
         ),
         array(
             'name' => 'Telefonia domestica',            
-            'categoryid' => 3,
+            'category_id' => 3,
         ),
         array(
             'name' => 'Videojuegos',            
-            'categoryid' => 4,
+            'category_id' => 4,
         ),
         array(
             'name' => 'Consolas',            
-            'categoryid' => 4,
+            'category_id' => 4,
         ),
         array(
             'name' => 'Televisores',            
-            'categoryid' => 5,
+            'category_id' => 5,
         ),
         array(
             'name' => 'Proyectores',            
-            'categoryid' => 5,
+            'category_id' => 5,
         ),
         array(
             'name' => 'Cables',            
-            'categoryid' => 6,
+            'category_id' => 6,
         ),
         array(
             'name' => 'Cargadores',            
-            'categoryid' => 6,
+            'category_id' => 6,
         ),
         array(
             'name' => 'Audio',            
-            'categoryid' => 6,
+            'category_id' => 6,
         ),
         array(
             'name' => 'Video',            
-            'categoryid' => 6,
+            'category_id' => 6,
         ),
         array(
             'name' => 'Baterias',            
-            'categoryid' => 6,
+            'category_id' => 6,
         ),
     );
     /**
@@ -97,7 +97,7 @@ class SubcategoriesTableSeeder extends Seeder
         foreach ($this->arraySubcategorias as $subcategoria) {
             $subcategory = new Subcategory();
             $subcategory->name = $subcategoria['name'];
-            $subcategory->categoryid = $subcategoria['categoryid'];
+            $subcategory->category_id = $subcategoria['category_id'];
             $subcategory->save();
         }
         Schema::enableForeignKeyConstraints();
