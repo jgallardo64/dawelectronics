@@ -73,8 +73,13 @@ td {
     color: white;
 }
 
-#busqueda {
-    width: 200px;
+.barraBusqueda {
+    margin-top: 22px;
+}
+
+.btnBusqueda {
+    background: #496487 !important;
+    color: white !important;
 }
 
 /* NAVBAR CSS */

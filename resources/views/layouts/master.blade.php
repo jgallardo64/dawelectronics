@@ -44,7 +44,7 @@
             @yield('producto')
         </div>
         <div>
-
+            @yield('busqueda')
             @yield('productos')
 
         </div>

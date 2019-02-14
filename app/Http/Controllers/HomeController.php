@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Product;
 
 class HomeController extends Controller
 {
@@ -24,5 +25,14 @@ class HomeController extends Controller
     public function index()
     {
         return view('home');
+    }
+
+    public function busqueda(Request $request)
+    {
+        $arrayProductos = Product::where('brand', 'like', '%'.$request->busqueda.'%')->get();
+         
+        
+        //return var_dump($arrayProductos);
+        return view('search', array('arrayProductos' => $arrayProductos));
     }
 }

@@ -22,6 +22,8 @@ Route::get('category/{category}/{subCategory}', 'CategoriesController@mostrarSub
 
 Route::get('product/{product}', 'ProductsController@detallesProducto');
 
+Route::post('search', 'HomeController@busqueda');
+
 Route::group(['middleware' => 'auth'], function () {
     Route::group(['middleware' => 'admin:1'], function () {
         Route::get('user/admin', 'UsersController@mostrarPanelAdmin');

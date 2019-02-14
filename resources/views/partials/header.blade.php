@@ -23,12 +23,15 @@
                 <a href="{{url('/')}}"><img width="179" src="{{url('img/daw_electronics.png')}}"></a>
             </div>
             <div class="d-none d-xl-block col-xl-4">
-            <div class="search-container">
-                <form class="buscar" action="/action_page.php">
-                    <input type="text" name="" id="busqueda" placeholder="Busca aqui">
-                    <button type="submit"><i class="fa fa-search"></i></button>
+                <form action="{{url('/search')}}" method="post">
+                @csrf
+                    <div class="input-group mb-3 barraBusqueda">                    
+                        <input type="text" class="form-control" placeholder="Busca aqui..." id="busqueda" name="busqueda">
+                        <div class="input-group-append">
+                            <button class="btn btnBusqueda" type="submit"><i class="fa fa-search"></i></button>
+                        </div>                                            
+                    </div>
                 </form>
-            </div>
             </div>
             <div class="d-none d-sm-block col-xl-3 col-md-4 col-sm-6 col-centered">
 
