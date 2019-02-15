@@ -24,6 +24,12 @@ Route::get('product/{product}', 'ProductsController@detallesProducto');
 
 Route::post('search', 'HomeController@busqueda');
 
+Route::get('carrito', 'AddToCartController@getCarrito');
+Route::get('carrito/borrar/{id}', 'AddToCartController@delCarrito');
+Route::get('carrito/numero', 'AddToCartController@numeroCarrito');
+Route::get('carrito/{id}/menos', 'AddToCartController@unoMenosCarrito');
+Route::get('carrito/{id}', 'AddToCartController@addCarrito');
+
 Route::group(['middleware' => 'auth'], function () {
     Route::group(['middleware' => 'admin:1'], function () {
         Route::get('user/admin', 'UsersController@mostrarPanelAdmin');
