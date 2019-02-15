@@ -132,6 +132,10 @@ td {
     text-decoration: none;
 }
 
+.totalItemsCart {
+    margin-left: 25px;
+}
+
 .card-productos {
     float: left;
     width: 220px;

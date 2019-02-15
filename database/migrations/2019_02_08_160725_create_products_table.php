@@ -23,7 +23,6 @@ class CreateProductsTable extends Migration
             $table->unsignedInteger('category_id');
             $table->unsignedInteger('subcategory_id');
             $table->unsignedInteger('provider_id');
-            $table->string('imgRoute')->nullable();
             $table->integer('stock')->nullable();
             $table->unsignedInteger('taxes_id');
             $table->boolean('active');

@@ -1,10 +1,14 @@
 @extends('layouts.master')
 
 @section('content')
+<br>
 
-<form action="{{url('pagar')}}" method="post">
-    @csrf
+    @if(\Session::get('error'))
+    <div class="alert alert-danger">Hay habido un error con tu compra, inténtalo más tarde</div>
+    @endif
+    
     <div class="tituloCategoria">
+        
         <h1>LISTADO DEL CARRITO</h1>
     </div>
     <table class="table table-hover col-lg-12">
@@ -89,12 +93,15 @@
             </tr>
             <tr class="border border-info col-lg-4">
 
-                <td colspan="2" class="text-center"><input class="btn btn-dark text-white" type="submit" value="Realizar compra" name="compra" id="compra"></td>
+                <td colspan="2" class="text-center">
+                    <form action="{{url('pagar')}}" method="post">
+                        @csrf
+                        <input class="btn btn-dark text-white" type="submit" value="Realizar compra" name="compra" id="compra"></td>
+                    </form>
             </tr>
         </tbody>
         <tfoot></tfoot>
     </table>
-</form>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 
 @stop

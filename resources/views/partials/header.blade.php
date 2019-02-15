@@ -221,10 +221,12 @@
             <div class="d-none d-md-block col-xl-2 col-md-4 col-centered">
                 <a href="/carrito">
                     <div class="cart_anchor">
-                        <span class="totalItemsCart font-weight-bold text-white">
+                        <span class="totalItemsCart font-weight-bold text-white badge badge-pill badge-primary">
 
                             @isset($productos)
-                                {{count($productos)}}
+                                @if(!empty($productos))
+                                    {{count($productos)}}
+                                @endif
                             @endisset
 
                             @empty($productos)
