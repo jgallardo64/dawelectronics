@@ -48,6 +48,7 @@
         <div>
             @yield('busqueda')
             @yield('productos')
+            @yield('pago')
 
         </div>
         <div class="row">
