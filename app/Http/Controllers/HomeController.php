@@ -29,10 +29,13 @@ class HomeController extends Controller
 
     public function busqueda(Request $request)
     {
-        $arrayProductos = Product::where('brand', 'like', '%'.$request->busqueda.'%')->get();
-         
-        
-        //return var_dump($arrayProductos);
+        $arrayProductos = Product::where('object', 'like', '%'.$request->busqueda.'%')
+                                ->orWhere('name', 'like', '%'.$request->busqueda.'%')
+                                ->orWhere('brand', 'like', '%'.$request->busqueda.'%')
+                                ->orWhere('price', $request->busqueda)
+                                ->orWhere('model', 'like', '%'.$request->busqueda.'%')
+                                ->get();
+
         return view('search', array('arrayProductos' => $arrayProductos));
     }
 }
