@@ -2,7 +2,8 @@
 
 @section('content')
 
-<form action="#" method="post">
+<form action="{{url('pagar')}}" method="post">
+    @csrf
     <div class="tituloCategoria">
         <h1>LISTADO DEL CARRITO</h1>
     </div>

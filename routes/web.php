@@ -49,6 +49,7 @@ Route::group(['middleware' => 'auth'], function () {
         Route::get('user/admin/detallespedido/{id}', 'OrdersController@detallesPedidoUsuario');
     });
     Route::get('user/pedidos{id}', 'UsersController@listarPedidos');
+    Route::post('pagar', 'FinishOrderController@pagar');
 });
 
 Auth::routes();
