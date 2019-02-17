@@ -71,7 +71,7 @@ td {
     margin-top: 12px;
 }
 
-#banner-top-text {
+.banner-top-text {
     font-size: 13px;
     color: #ebebed;
     text-align: right;
@@ -155,6 +155,11 @@ td {
     height: 260px;
 }
 
+.totalItemsCart,
+.totalItemsCartProv {
+    margin-left: 25px;
+}
+
 .card-pedidos {
     float: left;
     width: 240px;
@@ -202,4 +207,54 @@ td {
 .price {
     font-size: 40px;
     font-weight: bold;
+}
+
+.footer {
+    height: 100px;
+    background-color: black;
+    color: white;
+}
+
+.alineado-abajo-izqu {
+    position: absolute;
+    bottom: 5px;
+    left: 10px;
+}
+
+.alineado-abajo-dere {
+    position: absolute;
+    bottom: 5px;
+    right: 10px;
+}
+
+.font-orbitron {
+    font-family: 'Orbitron', sans-serif;
+}
+
+.font-ptsans {
+    font-family: 'PT Sans', sans-serif;
+}
+
+.font-felipa {
+    font-family: 'Felipa', cursive;
+}
+
+.font-satisfy {
+    font-family: 'Satisfy', cursive;
+}
+
+.font-ruda {
+    font-family: 'Ruda', sans-serif;
+}
+
+.font-economica {
+    font-family: 'Economica', sans-serif;
+}
+
+.font-b612 {
+    font-family: 'B612 Mono', monospace;
+}
+
+font-2em {
+    font-size: 2em;
 }

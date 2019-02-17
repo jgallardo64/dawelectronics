@@ -50,15 +50,21 @@ Route::group(['middleware' => 'auth'], function () {
         Route::get('user/admin/pedidosusuarios', 'OrdersController@listarPedidosUsuarios');
         Route::get('user/admin/detallespedido/{id}', 'OrdersController@detallesPedidoUsuario');
         Route::get('user/admin/', 'OrdersController@ultimosProductos');
-        Route::get('user/admin/ventas', 'ProductsController@masVendidos');
+        Route::get('user/admin/ventas', 'ProductsController@Ventas');
         Route::get('user/admin/carritoProv', 'ProvidersController@getCarritoProv');
+        Route::get('user/admin/carritoProv/emptyCartProv', 'ProvidersController@emptyCartProv');
         Route::get('user/admin/carritoProv/borrar/{id}', 'ProvidersController@delCarritoProv');
         Route::get('user/admin/carritoProv/numero', 'ProvidersController@numeroCarritoProv');
         Route::get('user/admin/carritoProv/{id}/menos', 'ProvidersController@unoMenosCarritoProv');
         Route::get('user/admin/carritoProv/{id}', 'ProvidersController@addCarritoProv');
+        Route::post('user/admin/pagar', 'FinishOrderController@pagarProveedor');
     });
-    Route::get('user/pedidos{id}', 'UsersController@listarPedidos');
+    Route::get('user/pedidos', 'OrdersController@listarPedidosUsuario');
     Route::post('pagar', 'FinishOrderController@pagar');
+    Route::get('user/myprofile/edit/pass', 'UsersController@passProfileUser');
+    Route::post('user/myprofile/edit/pass', 'UsersController@editPassProfileUser');
+    Route::put('user/myprofile/edit/{id}', 'UsersController@editProfileUser');
+    Route::get('user/myprofile', 'UsersController@profileUser');
 });
 
 Auth::routes();

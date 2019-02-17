@@ -33,14 +33,14 @@
     <div class="col-xl-6 col-lg-12 col-md-12 col-sm-12 col-xs-12">
 
         <details open>
-            <summary class="font-weight-bold">Especificaciones</summary>
+            <summary class="font-weight-bold font-2em font-satisfy">Especificaciones</summary>
             @php
             echo nl2br(htmlentities($product->specifications,ENT_QUOTES,'UTF-8'))
             @endphp 
         </details>
         <br>
         <details open>
-            <summary class="font-weight-bold">Descripción </summary>
+            <summary class="font-weight-bold font-2em font-satisfy">Descripción </summary>
             {{$product->description}}
         </details>
 

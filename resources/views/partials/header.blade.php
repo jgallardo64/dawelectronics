@@ -3,8 +3,8 @@
         <div class="d-sm-block col-xl-6 col-lg-8 col-md-12 col-sm-12 col-xs-12" id="banner-top-title">
             <strong>TIENDA DE COMPONENTES ELECTRÓNICOS</strong>
         </div>
-        <div class="d-none d-xl-block col-xl-6" id="banner-top-text">
-            Nuevos productos | Carrito | Formas de Envio | Metodos de pago
+        <div class="d-none d-xl-block col-xl-6 banner-top-text">
+            <a href="#nuevosproductos">Nuevos productos</a>  | <a href="{{url('carrito')}}">Carrito</a> | <a href="#interesante">Interesante</a> | <a href="#categorias">Nuestras categorias</a>
         </div> 
     </div>
 
@@ -43,11 +43,13 @@
             <a class="dropdown-item" href="{{url('user/admin')}}">
                 Panel Administrador</a>
 
-            @else
+            @endif
             <a class="dropdown-item" href="{{url('user/pedidos')}}">
                 Mis Pedidos</a>
+                
+            <a class="dropdown-item" href="{{url('user/myprofile')}}">
+            Mi perfil</a>
 
-            @endif
             <a class="dropdown-item" href="{{ route('logout') }}"
                onclick="event.preventDefault();
                         document.getElementById('logout-form').submit();">
@@ -218,7 +220,7 @@
     <div class="col-xl-2 col-lg-2 col-md-2 col-sm-2 col-xs-2 col-centered ">
         <a href="/carrito">
             <div class="cart_anchor">
-                <span class="totalItemsCart font-weight-bold text-white">
+                <span class="totalItemsCart font-weight-bold text-white badge badge-pill badge-primary">
 
                     @isset($productos)
                     {{count($productos)}}

@@ -7,20 +7,17 @@ use App\Http\Controllers\Controller;
 use App\Provider;
 use App\Product;
 
-class ProvidersController extends Controller
-{
-    public function listarProveedores(){
+class ProvidersController extends Controller {
+
+    public function listarProveedores() {
         $arrayProveedores = Provider::all();
-        return view('providers.index',  array('arrayProveedores' => $arrayProveedores));
+        return view('providers.index', array('arrayProveedores' => $arrayProveedores));
     }
 
-    public function listarProductosProveedor($provider)
-    {
+    public function listarProductosProveedor($provider) {
         $arrayProductos = Product::where('provider_id', $provider)->get();
         return view('providers.list', array('arrayProductos' => $arrayProductos, 'provider_id' => $provider));
     }
-
-
 
     public function __construct() {
 
@@ -35,7 +32,7 @@ class ProvidersController extends Controller
         if (\Session::has('carritoProv')) {
             $this->eachProductCartProv();
         }
-        return view('providers.carritoProv'); 
+        return view('providers.carritoProv');
         //, array('productos' => \Session::get('carrito')));
     }
 
@@ -69,7 +66,7 @@ class ProvidersController extends Controller
         }
     }
 
-     /**
+    /**
      * Resta una unidad del producto seleccionado
      * @param type $id Id del producto
      * @return int
@@ -112,7 +109,7 @@ class ProvidersController extends Controller
         }
     }
 
-       /**
+    /**
      * Borra el producto sin importar la cantidad
      * @param type $id Id del producto
      * @return int Resultado de la operación
@@ -135,7 +132,7 @@ class ProvidersController extends Controller
         return $num;
     }
 
-     /**
+    /**
      * Calcula el precio de cada producto en relación con la cantidad dentro 
      * del carritoProv
      */
@@ -151,5 +148,9 @@ class ProvidersController extends Controller
             \Session::put('carritoProv', $productosProv);
         }
     }
-    
+
+    public function emptyCartProv() {
+        \Session::forget('carritoProv');
+    }
+
 }

@@ -5,6 +5,8 @@ namespace App\Http\Controllers;
 use App\Order;
 use App\OrderLine;
 use App\Product;
+
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Http\Request;
 
 class OrdersController extends Controller
@@ -13,6 +15,13 @@ class OrdersController extends Controller
     {
         $arrayPedidos = Order::all();
         return view('orders.list', array('arrayPedidos' => $arrayPedidos));
+    }
+
+    public function listarPedidosUsuario()
+    {
+        var_dump(Auth::user()->id);
+        $arrayPedidosUsuario = Order::where('user_id', Auth::user()->id)->get();
+        return view('user.pedidos', array('arrayPedidosUsuario' => $arrayPedidosUsuario));
     }
 
     public function ultimosProductos(){

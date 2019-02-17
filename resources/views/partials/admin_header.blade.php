@@ -4,9 +4,6 @@
             <div class="d-none d-sm-block col-xl-6 col-md-12 col-sm-12 col-xs-12" id="banner-top-title">
                 <strong>TIENDA DE COMPONENTES ELECTRÓNICOS</strong>
             </div>
-            <div class="d-none d-xl-block col-xl-6" id="banner-top-text">
-                Nuevos productos | Carrito | Formas de Envio | Metodos de pago
-            </div>
         </div>
     </div>
 </div>

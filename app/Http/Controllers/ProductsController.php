@@ -113,12 +113,23 @@ class ProductsController extends Controller
         return redirect('user/admin/listarproductos');
     }
 
-    public function masVendidos()
+    public function Ventas()
     {
-        $arrayMasVendidos = DB::raw('SELECT o.product_id, sum(o.quantity) as cantidad
-                            FROM order_lines O
-                            group by o.product_id
-                            order by cantidad DESC')->get();
-        return redirect('user/admin/ventas', array('arrayMasVendidos' => $arrayMasVendidos));
+        $arrayMasVendidos = DB::table('order_lines')
+                            ->join('products', 'order_lines.product_id', '=', 'products.id')
+                            ->select(DB::raw('order_lines.product_id, products.brand, products.model, products.price, products.stock, sum(order_lines.quantity) as vendidos'))
+                            ->groupBy('order_lines.product_id')
+                            ->orderByDesc('vendidos')
+                            ->take(5)
+                            ->get();
+
+        $arrayMenosVendidos = DB::table('order_lines')
+                            ->join('products', 'order_lines.product_id', '=', 'products.id')
+                            ->select(DB::raw('order_lines.product_id, products.brand, products.model, products.price, products.stock, sum(order_lines.quantity) as vendidos'))
+                            ->groupBy('order_lines.product_id')
+                            ->orderBy('vendidos')
+                            ->take(5)
+                            ->get();
+        return view('orders.ventas', array('arrayMasVendidos' => $arrayMasVendidos, 'arrayMenosVendidos' => $arrayMenosVendidos));
     }
 }

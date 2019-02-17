@@ -15,7 +15,7 @@ $(document).ready(function () {
         });
         realizarCompra();
     }
-              );
+    );
 
 
     $('.mas').click(function () {
@@ -79,19 +79,30 @@ $(document).ready(function () {
         var td1 = $(this).parent().parent().find('td:eq(2)');
         var productId = td1.find('span:eq(0)').attr('id').split('uds')[1];
         var price = $(this).parent().parent().find('.subtotal').text();
+
+        /**
+         * Cambia el color de una linea del carrito justo antes de eliminarla
+         */
+        td1.parent().css('background-color', '#030303');
+
+
         $.ajax({
             url: "/carrito/borrar/" + productId,
             type: "get",
             success: function (data) {
-                //realizarCompra(); 
+
+                /**
+                 * Borra una linea del carrito
+                 */
                 $('#uds' + productId).parent().parent().fadeOut(function () {
                     $(this).remove();
+
                     realizarCompra();
                 });
+
                 /**
                  * Muestra el precio  total de los productos
                  */
-
                 $('.totalItemsCart').text(data);
 
             }
@@ -99,7 +110,10 @@ $(document).ready(function () {
 
     });
 
-    $('#emptyCart').click(function(){
+    /**
+     * Mensaje de confirmación antes de vaciar el carrito.
+     */
+    $('#emptyCart').click(function () {
 
         var r = confirm("¿Estás seguro de vaciar el carrito?");
         if (r == true) {
@@ -108,24 +122,28 @@ $(document).ready(function () {
                 type: "get",
                 success: function (data) {
                     console.log('carrito borrado');
-                    location.href="/carrito";
+                    location.href = "/carrito";
                 }
             });
         }
-
-
-
     });
+    
+    
 });
 
 function showProductSellPrice(qty, price) {
     return qty * price;
 }
 
+
+/**
+ * Recalcula el total del carrito con impuestos
+ */
 function realizarCompra() {
 
     var total = 0;
     var tax = 0;
+
 
     $('.subtotal').each(function () {
         total += parseFloat($(this).html());
@@ -137,13 +155,3 @@ function realizarCompra() {
     $('#totalBeforeTax').html(subtotal.toFixed(2));
 }
 
-
-function rsealizarCompra() {
-    //$('#totalPrice').html(parseInt($('#totalPrice').html()) - parseInt(price));
-    var totalTax = Math.round((parseFloat($('#totalPrice').html()) * 0.21), 2);
-    //console.log(totalTax);
-    var totalBeforeTax = Math.round((parseFloat($('#totalPrice').html()) / 1.21), 2);
-    $('#totalTax').html(totalTax);
-    $('#totalBeforeTax').html(totalBeforeTax);
-    $('#totalPrice').html(totalTax + totalBeforeTax);
-}

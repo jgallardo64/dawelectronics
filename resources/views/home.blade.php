@@ -9,7 +9,7 @@
 <hr>
 
 <div class="tituloCategoria font-b612">
-    <h1>ULTIMOS PRODUCTOS</h1>
+    <h1 id="nuevosproductos">ULTIMOS PRODUCTOS</h1>
 
 </div> 
 <div>
@@ -44,7 +44,7 @@
 <hr>
 
 <div class="tituloCategoria font-b612">
-    <h1>QUIZÁS TE INTERESE</h1>
+    <h1 id="interesante">QUIZÁS TE INTERESE</h1>
 </div> 
 
 <div>
@@ -78,7 +78,7 @@
 <hr>
 
 <div class="tituloCategoria font-b612">
-    <h1>NUESTRAS CATEGORIAS</h1>
+    <h1 id="categorias">NUESTRAS CATEGORIAS</h1>
 </div> 
 
 <div>
@@ -98,4 +98,6 @@
         @endforeach 
     </div>
 </div>
+
+@include('partials.footer')
 @stop

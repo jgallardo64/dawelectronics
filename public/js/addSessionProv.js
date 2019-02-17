@@ -100,6 +100,21 @@ $(document).ready(function () {
         });
 
     });
+    
+        $('#emptyCartProv').click(function () {
+
+        var r = confirm("¿Estás seguro de vaciar el carrito?");
+        if (r == true) {
+            $.ajax({
+                url: "/user/admin/carritoProv/emptyCartProv",
+                type: "get",
+                success: function (data) {
+                    console.log('carrito borrado');
+                    location.href = "/user/admin/carritoProv";
+                }
+            });
+        }
+    });
 });
 
 function realizarCompraProv() {
@@ -115,4 +130,7 @@ function realizarCompraProv() {
     $('#totalPriceProv').html(total.toFixed(2));
     $('#totalTaxProv').html(tax.toFixed(2));
     $('#totalBeforeTaxProv').html(subtotal.toFixed(2));
+}
+function showProductSellPrice(qty, price) {
+    return qty * price;
 }

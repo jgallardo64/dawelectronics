@@ -1,7 +1,7 @@
 @extends('layouts.master')
 
 @section('content')
-<div class="tituloCategoria font-b612">
+<div class="tituloCategoria font-economica">
     <h1>
         @if (isset($subCategory))
         {{$category}} / {{$subCategory}}
@@ -25,7 +25,7 @@
         <div>
             <a href="{{url('product/'.$producto->id)}}"><img class="card-img-top" src="{{url('images/'.$producto->id)}}.png" alt="Card image cap"></a></div>
         <div class="card-body">
-            <a href="{{url('product/'.$producto->id)}}"><h5 class="card-title">{{$producto->brand}} {{$producto->model}}</h5></a>
+            <a href="{{url('product/'.$producto->id)}}"><h5 class="card-title font-economica">{{$producto->brand}} {{$producto->model}}</h5></a>
             
         </div>
         

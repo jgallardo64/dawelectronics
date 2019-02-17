@@ -38,7 +38,7 @@
             <div class="row">
                 <div class="col-md-2">
                 </div>
-                <div class="col-md-8 width-900">
+                <div class="col-md-8 width-900 font-satisfy">
                 @yield('content')
                 </div>
                 <div class="col-md-2">
@@ -49,9 +49,9 @@
 
         <!----------------       Scripts       ---------------->
 
-        <script src="js/jquery.min.js"></script>
+<!--        <script src="js/jquery.min.js"></script>
         <script src="js/bootstrap.min.js"></script>
-        <script src="js/scripts.js"></script>
+        <script src="js/scripts.js"></script>-->
     </body>
 
 </html>

@@ -16,6 +16,7 @@
         crossorigin="anonymous">
     <!-- FUENTES -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <link href="https://fonts.googleapis.com/css?family=B612+Mono|Economica|Felipa|Orbitron|PT+Sans|Ruda|Satisfy" rel="stylesheet">
     <!-- CSS -->
     <link href="{{asset('css/layoutHome.css')}}" rel="stylesheet">
 
@@ -46,10 +47,10 @@
                 @yield('producto')
                 @yield('busqueda')
                 @yield('productos')
-
+                @yield('formulario')
+                @yield('pedidosUsuario')
             </div>
     </div>
-
 
     <!----------------       Scripts       ---------------->
 

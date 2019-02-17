@@ -59,15 +59,16 @@
             @endforeach 
         </tbody>
         <tfoot class="border bg-dark">
-            <tr>                
-                <td colspan="5"></td>
+            <tr>  
+               <td colspan="2"><span class="btn btn-danger" id="emptyCartProv">Vaciar Carrito</span></td>              
+                <td colspan="3"></td>
             </tr>
         </tfoot>
     </table>
 
 
 
-    <table class="border border-info float-right col-lg-4">
+    <table class="border border-info float-right col-xl-3 col-lg-3 col-md-4 col-sm-6 col-xs-6">
         <thead>
         <th colspan="2" class="bg-info text-center text-white">Detalle Compra</th>
         </thead>
@@ -104,6 +105,5 @@
     </table>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 
-<script src="/js/addSessionProv.js"></script>
 
 @stop

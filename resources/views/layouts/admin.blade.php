@@ -44,7 +44,9 @@
     @yield('detallespedido')
     @yield('notificaciones')
     @yield('carritoProv')
+    @yield('masvendidos')
 </div>
+
 
     <!----------------       Scripts       ---------------->
 
