@@ -118,6 +118,10 @@ class AddToCartController extends Controller {
         $num = count(\Session::get('carrito'));
         return $num;
     }
+    
+    public function emptyCart(){
+        \Session::forget('carrito');
+    }
 
     /**
      * Calcula el precio de cada producto en relación con la cantidad dentro 

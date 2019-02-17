@@ -3,7 +3,9 @@
 namespace App\Http\Controllers;
 
 use App\Product;
+use App\OrderLine;
 
+use Illuminate\Support\Facades\DB;
 use Illuminate\Http\Request;
 
 class ProductsController extends Controller
@@ -109,5 +111,14 @@ class ProductsController extends Controller
         }
         $producto->save();
         return redirect('user/admin/listarproductos');
+    }
+
+    public function masVendidos()
+    {
+        $arrayMasVendidos = DB::raw('SELECT o.product_id, sum(o.quantity) as cantidad
+                            FROM order_lines O
+                            group by o.product_id
+                            order by cantidad DESC')->get();
+        return redirect('user/admin/ventas', array('arrayMasVendidos' => $arrayMasVendidos));
     }
 }

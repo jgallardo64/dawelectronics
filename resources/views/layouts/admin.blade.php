@@ -27,7 +27,7 @@
 
 <body>
 
-    <div class="container-fluid">
+    <div class="contenedor">
 
 
         <!----------------        HEADER       ---------------->
@@ -36,18 +36,19 @@
 
     </div>
     <!----------------       FORMULARIOS       ---------------->
-
+    <div class="container mx-auto">
     @yield('listar')
     @yield('formulario')
     @yield('providers')
     @yield('pedidos')
     @yield('detallespedido')
+    @yield('notificaciones')
+    @yield('carritoProv')
+</div>
 
     <!----------------       Scripts       ---------------->
 
-    <script src="js/jquery.min.js"></script>
-    <script src="js/bootstrap.min.js"></script>
-    <script src="js/scripts.js"></script>
+    <script src="/js/addSessionProv.js"></script>
 </body>
 
 </html>

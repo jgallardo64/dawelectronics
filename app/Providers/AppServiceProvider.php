@@ -17,6 +17,9 @@ class AppServiceProvider extends ServiceProvider {
         view()->composer('*',function($view){
             $view->with('productos',\Session::get('carrito'));
         });
+        view()->composer('*',function($view){
+            $view->with('productosProv',\Session::get('carritoProv'));
+        });
 
 
     }

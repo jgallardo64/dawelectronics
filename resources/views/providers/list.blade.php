@@ -14,18 +14,23 @@
                     <th scope="col">Marca</th>
                     <th scope="col">Modelo</th>
                     <th scope="col">Country</th>
-                    <th scope="col">Cantidad</th>
                     <th scope="col">Carrito</th>
                 </tr>
             </thead>
+            
                 @foreach ($arrayProductos as $product)
                     <tr>
                         <td>{{$product->name}}</td>
                         <td>{{$product->brand}}</td>
                         <td>{{$product->model}}</td>           
-                        <td>{{$product->price}}€</td>
-                        <td><input type="number"></td>
-                        <td><button type="button" class="btn btn-primary">Añadir</button></td>
+                        <td>
+                            <span >{{$product->price}}€</span>
+                        </td>
+                        <td>
+                        <span class="productId d-none">{{$product->id}}</span>
+                        <button type="button" class="btn btn-primary addCartProv" type="submit">Añadir</button>
+                            
+                        </td></form>
                         
                         
                       

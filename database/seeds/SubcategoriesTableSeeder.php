@@ -45,7 +45,7 @@ class SubcategoriesTableSeeder extends Seeder
             'category_id' => 3,
         ),
         array(
-            'name' => 'Telefonia domestica',            
+            'name' => 'Domestica',            
             'category_id' => 3,
         ),
         array(

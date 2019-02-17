@@ -29,6 +29,10 @@ class FinishOrderController extends Controller
                 $linea = new OrderLine();
                 $linea->order_id = $pedido->id;
                 $linea->product_id = $producto->id;
+                    /* BAJAMOS EL STOCK DEL PRODUCTO DE LA LINEA RESTANDOLE LA CANTIDAD COMPRADA */
+                    $prod = Product::find($producto->id);
+                    $prod->stock = $prod->stock - $producto->cant;
+                    $prod->save();
                 $linea->price = $producto->price;            
                 /* SACAMOS IMPUESTO APLICADO AL PRODUCTO */
                 $linea->taxApplied = Product::find($producto->id)->taxes->value;       
@@ -39,6 +43,8 @@ class FinishOrderController extends Controller
             }
             $pedido->total = $totalPedido;
             $pedido->save();
+
+
         });
 
         if (is_null($transaccion)) {

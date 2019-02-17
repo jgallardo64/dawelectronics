@@ -13,14 +13,16 @@ class DatabaseSeeder extends Seeder
     {
         Schema::disableForeignKeyConstraints();
 
+        $this->call(UsersTableSeeder::class);
         $this->call(CategoriesTableSeeder::class);
-        $this->call(ProductsTableSeeder::class);
         $this->call(SubcategoriesTableSeeder::class);
+        $this->call(ProductsTableSeeder::class);
+        $this->call(OrdersTableSeeder::class); 
+        $this->call(OrderLinesTableSeeder::class);               
         $this->call(TaxesTableSeeder::class);
         $this->call(ProvidersTableSeeder::class);
-        $this->call(ProviderOrdersTableSeeder::class);
-        $this->call(UsersTableSeeder::class);
-
+        $this->call(ProviderOrdersTableSeeder::class); 
+        
         Schema::enableForeignKeyConstraints();
     }
 }

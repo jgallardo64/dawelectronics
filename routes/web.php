@@ -24,11 +24,13 @@ Route::get('product/{product}', 'ProductsController@detallesProducto');
 
 Route::post('search', 'HomeController@busqueda');
 
-Route::get('carrito', 'AddToCartController@getCarrito');
+Route::get('carrito/emptyCart', 'AddToCartController@emptyCart');
 Route::get('carrito/borrar/{id}', 'AddToCartController@delCarrito');
 Route::get('carrito/numero', 'AddToCartController@numeroCarrito');
 Route::get('carrito/{id}/menos', 'AddToCartController@unoMenosCarrito');
 Route::get('carrito/{id}', 'AddToCartController@addCarrito');
+Route::get('carrito', 'AddToCartController@getCarrito');
+
 
 Route::group(['middleware' => 'auth'], function () {
     Route::group(['middleware' => 'admin:1'], function () {
@@ -47,6 +49,13 @@ Route::group(['middleware' => 'auth'], function () {
         Route::get('user/admin/productosproveedor/{id}','ProvidersController@listarProductosProveedor');
         Route::get('user/admin/pedidosusuarios', 'OrdersController@listarPedidosUsuarios');
         Route::get('user/admin/detallespedido/{id}', 'OrdersController@detallesPedidoUsuario');
+        Route::get('user/admin/', 'OrdersController@ultimosProductos');
+        Route::get('user/admin/ventas', 'ProductsController@masVendidos');
+        Route::get('user/admin/carritoProv', 'ProvidersController@getCarritoProv');
+        Route::get('user/admin/carritoProv/borrar/{id}', 'ProvidersController@delCarritoProv');
+        Route::get('user/admin/carritoProv/numero', 'ProvidersController@numeroCarritoProv');
+        Route::get('user/admin/carritoProv/{id}/menos', 'ProvidersController@unoMenosCarritoProv');
+        Route::get('user/admin/carritoProv/{id}', 'ProvidersController@addCarritoProv');
     });
     Route::get('user/pedidos{id}', 'UsersController@listarPedidos');
     Route::post('pagar', 'FinishOrderController@pagar');

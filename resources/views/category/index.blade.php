@@ -13,12 +13,13 @@
 </div> 
 @stop
 @section('content1')
+<div >
 
+<div class="c d-inline-block">
 <p id="status"></p>
 @foreach ($arrayProductos as $producto)
-<div class="cardGen">
 
-    <div class="card card-productos">
+    <div class="card card-productos text-center">
         <span class="d-none productId" >{{$producto->id}}</span>
 
         <div>
@@ -40,7 +41,6 @@
         </div>
     </div>
 
-</div>
-
 @endforeach 
+</div></div>
 @stop

@@ -29,33 +29,25 @@
 
 <body>
 
-    <div class="container-fluid">
+    <div class="contenedor">    
 
-        <!----------------        HEADER       ---------------->
+        <!--------------------        HEADER       -------------------->
 
-        @include('partials.header')
+            @include('partials.header')            
+    
+        <!--------------------   ULTIMOS PRODUCTOS       -------------------->
 
-    </div>
-    <!----------------       ULTIMOS PRODUCTOS       ---------------->
+            
 
-    <div class="anchoTarjetas">
-        @yield('content')
+            <div class="container mx-auto">
+                @yield('home')
+                @yield('content')
+                @yield('content1')
+                @yield('producto')
+                @yield('busqueda')
+                @yield('productos')
 
-        <div class="anchoTarjetas">
-            @yield('content1')
-            @yield('producto')
-        </div>
-        <div>
-            @yield('busqueda')
-            @yield('productos')
-            @yield('pago')
-
-        </div>
-        <div class="row">
-            <div class="col-md-2"> </div>
-            <div class="col-md-8"> </div>
-            <div class="col-md-2"> </div>
-        </div>
+            </div>
     </div>
 
 

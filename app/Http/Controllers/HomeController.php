@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Product;
+use App\Category;
 
 class HomeController extends Controller
 {
@@ -24,7 +25,10 @@ class HomeController extends Controller
      */
     public function index()
     {
-        return view('home');
+        $ultimosProductos = Product::all()->sortByDesc('created_at')->take(5);
+        $productosCategoria = Product::where('category_id', rand(1, 6))->where('active', 1)->take(5)->get();
+        $categorias = Category::all();
+        return view('home', array('ultimosProductos' => $ultimosProductos, 'productosCategoria' => $productosCategoria, 'categorias' => $categorias));
     }
 
     public function busqueda(Request $request)
