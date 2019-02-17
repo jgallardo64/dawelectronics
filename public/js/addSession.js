@@ -15,7 +15,7 @@ $(document).ready(function () {
         });
         realizarCompra();
     }
-    );
+              );
 
 
     $('.mas').click(function () {
@@ -99,7 +99,23 @@ $(document).ready(function () {
 
     });
 
+    $('#emptyCart').click(function(){
 
+        var r = confirm("¿Estás seguro de vaciar el carrito?");
+        if (r == true) {
+            $.ajax({
+                url: "/carrito/emptyCart",
+                type: "get",
+                success: function (data) {
+                    console.log('carrito borrado');
+                    location.href="/carrito";
+                }
+            });
+        }
+
+
+
+    });
 });
 
 function showProductSellPrice(qty, price) {

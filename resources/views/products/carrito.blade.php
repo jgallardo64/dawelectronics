@@ -1,14 +1,10 @@
 @extends('layouts.master')
 
-@section('content')
-<br>
+@section('content1')
 
-    @if(\Session::get('error'))
-    <div class="alert alert-danger">Hay habido un error con tu compra, inténtalo más tarde</div>
-    @endif
-    
+<form action="{{url('pagar')}}" method="post">
+    @csrf
     <div class="tituloCategoria">
-        
         <h1>LISTADO DEL CARRITO</h1>
     </div>
     <table class="table table-hover col-lg-12">
@@ -59,8 +55,9 @@
             @endforeach 
         </tbody>
         <tfoot class="border bg-dark">
-            <tr>                
-                <td colspan="5"></td>
+            <tr>  
+               <td colspan="2"><span class="btn btn-danger" id="emptyCart">Vaciar Carrito</span></td>              
+                <td colspan="3"></td>
             </tr>
         </tfoot>
     </table>
@@ -93,15 +90,12 @@
             </tr>
             <tr class="border border-info col-lg-4">
 
-                <td colspan="2" class="text-center">
-                    <form action="{{url('pagar')}}" method="post">
-                        @csrf
-                        <input class="btn btn-dark text-white" type="submit" value="Realizar compra" name="compra" id="compra"></td>
-                    </form>
+                <td colspan="2" class="text-center"><input class="btn btn-dark text-white" type="submit" value="Realizar compra" name="compra" id="compra"></td>
             </tr>
         </tbody>
         <tfoot></tfoot>
     </table>
+</form>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 
 @stop
