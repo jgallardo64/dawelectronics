@@ -30,26 +30,28 @@
     {{-- LOGIN / REGISTRO--}}
     <div class="d-none d-md-block col-xl-3 col-lg-3 col-md-3 col-sm-3 col-xs-3 col-centered">
 
-        @if (Auth::check())       
+    @if (Auth::check())       
 
-        <button type="button" id="login" class="btn btn-primary" data-toggle="dropdown">
-            <div class="tituloCategoria">{{ Auth::user()->name }} <span class="caret"></span></div>
-        </button>
-        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-            @if (Auth::user()->admin)
-            <a class="dropdown-item" href="{{url('user/admin')}}">
-                Panel Administrador</a>
+<button type="button" id="login" class="btn btn-primary" data-toggle="dropdown">
+    <div class="tituloCategoria">{{ Auth::user()->name }} <span class="caret"></span></div>
+</button>
+<div class="dropdown-menu" aria-labelledby="navbarDropdown">
+    @if (Auth::user()->admin)
+    <a class="dropdown-item" href="{{url('user/admin')}}">
+        Panel Administrador</a>
 
-            @else
-            <a class="dropdown-item" href="{{url('user/pedidos')}}">
-                Mis Pedidos</a>
+    @endif
+    <a class="dropdown-item" href="{{url('user/pedidos')}}">
+        Mis Pedidos</a>
+        
+    <a class="dropdown-item" href="{{url('user/myprofile')}}">
+    Mi perfil</a>
 
-            @endif
-            <a class="dropdown-item" href="{{ route('logout') }}"
-               onclick="event.preventDefault();
-                        document.getElementById('logout-form').submit();">
-                {{ __('Logout') }}
-            </a>
+    <a class="dropdown-item" href="{{ route('logout') }}"
+       onclick="event.preventDefault();
+                document.getElementById('logout-form').submit();">
+        {{ __('Logout') }}
+    </a>
 
             <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
                 @csrf

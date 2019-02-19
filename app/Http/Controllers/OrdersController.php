@@ -19,7 +19,6 @@ class OrdersController extends Controller
 
     public function listarPedidosUsuario()
     {
-        var_dump(Auth::user()->id);
         $arrayPedidosUsuario = Order::where('user_id', Auth::user()->id)->get();
         return view('user.pedidos', array('arrayPedidosUsuario' => $arrayPedidosUsuario));
     }

@@ -24,7 +24,7 @@
                         <td>{{$pedido->total}} €</td>
                         <td>{{$pedido->created_at}}</td>
                         <td>
-                            <a href="{{url('user/admin/detallespedido/'.$pedido->id)}}">
+                            <a href="{{url('user/detallespedido/'.$pedido->id)}}">
                                 <button type="button" class="btn btn-primary" id="shop">Detalles</button>
                         </td>
                     </tr>

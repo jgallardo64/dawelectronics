@@ -48,7 +48,6 @@ Route::group(['middleware' => 'auth'], function () {
         Route::get('user/admin/proveedores','ProvidersController@listarProveedores');
         Route::get('user/admin/productosproveedor/{id}','ProvidersController@listarProductosProveedor');
         Route::get('user/admin/pedidosusuarios', 'OrdersController@listarPedidosUsuarios');
-        Route::get('user/admin/detallespedido/{id}', 'OrdersController@detallesPedidoUsuario');
         Route::get('user/admin/', 'OrdersController@ultimosProductos');
         Route::get('user/admin/ventas', 'ProductsController@Ventas');
         Route::get('user/admin/carritoProv', 'ProvidersController@getCarritoProv');
@@ -60,6 +59,7 @@ Route::group(['middleware' => 'auth'], function () {
         Route::post('user/admin/pagar', 'FinishOrderController@pagarProveedor');
     });
     Route::get('user/pedidos', 'OrdersController@listarPedidosUsuario');
+    Route::get('user/detallespedido/{id}', 'OrdersController@detallesPedidoUsuario');
     Route::post('pagar', 'FinishOrderController@pagar');
     Route::get('user/myprofile/edit/pass', 'UsersController@passProfileUser');
     Route::post('user/myprofile/edit/pass', 'UsersController@editPassProfileUser');
